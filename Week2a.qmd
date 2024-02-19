@@ -1,0 +1,114 @@
+---  
+title: "Week 2 - Introduction to Mathematical Modelling"
+format: pdf
+---
+  
+# Learning Objectives
+  
+In this module, you will learn to:
+  
+1. Critically observe a real-world problem and applying the 4-stages of mathematical modelling (building, analysing, validating and applying) to provide insights and predictions
+2. Demonstrate an understanding of basic mathematical concepts in data science, relating to linear function, descriptive analysis, inferential analysis and linear regression.
+3. Utilise R to prepare data for analysis, perform simple data analysis, create
+meaningful data visualization, and make predictions from data.
+4. Produce a rigorous analytical report which considers a broad range of mathematical and statistical methods to describe, analyse, extrapolate, and apply big data.
+
+# Administrivia
+- 12 Week half module
+- 4 hours of Seminars
+- 2 hours of theoretical work, 2 hours of practical work in R
+- 2 Assessments
+
+# Assessments
+- Assessment 1 is a case study report.
+- Due: 24th May 2024
+- This assessment counts for 40% of total grade.
+- This assessment *IS* eligible for self-certification 
+
+- Assessment 2 is an exam.
+- Due: Summer Exam Period
+- This assessment counts for 60% of your total grade.
+- This assessment *is not* eligible for self-certification.
+
+# Introduction:
+
+Mathematical modeling is a powerful technique used in various fields to understand, analyze, and solve complex real-world problems. In this module, we will explore the fundamentals of mathematical modeling, its applications, and the modeling process.
+
+## What is Mathematical Modeling?
+
+Mathematical modeling is the process of using mathematical equations, algorithms, and simulations to represent, describe, and analyze real-world phenomena. It bridges the gap between the physical world and mathematical abstractions. Data science is a multidisciplinary field that combines knowledge of statistics, computer science, and domain expertise. A strong foundation in statistics and mathematics is essential for data scientists. Data scientists should be comfortable with probability theory, statistical
+inference, hypothesis testing, and regression analysis.
+
+## What skills might a Mathematical Modeller need?
+
+- Programming: Data scientists should be proficient in at least one programming language, such as Python, R, or Java. They should be able to write efficient and well-documented code, and have experience with version control systems like Git.
+
+- Data Manipulation: Data scientists should be skilled in manipulating and cleaning data using tools like SQL, Pandas, or Excel. They should be familiar with data transformation, data normalization, and data cleaning techniques.
+
+- Machine Learning: Data scientists should have experience with machine learning algorithms, such as linear regression, logistic regression, decision trees, random forests, and neural networks. They should know how to evaluate models and choose the best model for a given problem.
+
+- Data Visualization: Data scientists should be able to visualize data using tools like Matplotlib, Seaborn, or Tableau. They should be able to create meaningful and informative visualizations that communicate insights from data.
+
+- Communication: Data scientists should have strong communication skills, both written and verbal. They should be able to explain complex concepts in simple terms, and effectively
+communicate insights to non-technical stakeholders.
+
+- Domain Expertise: Data scientists should have some domain expertise in the field they are working in. They should be familiar with the business context of the data they are working
+with, and have a deep understanding of the problems they are trying to solve.
+
+- Curiosity and Problem Solving: Data scientists should have a curious and inquisitive mindset, always looking for ways to improve their models and find insights in the data. They should be able to identify problems and propose solutions to those problems.
+
+- Continuous Learning: Data science is a rapidly evolving field, and data scientists should be willing to continuously learn and keep up with new developments in the field. They should be open to new ideas and techniques, and willing to adapt to changing circumstances.
+
+## Applications of Mathematical Modeling:
+
+Mathematical modeling is used in a wide range of fields, including: 
+  
+  - Physics: Modeling the motion of planets, electromagnetic waves, and quantum mechanics.
+- Engineering: Designing structures, optimizing processes, and predicting behavior of systems.
+- Economics: Modeling supply and demand, economic growth, and financial markets.
+- Biology: Modeling population dynamics, disease spread, and biological processes.
+- Environmental Science: Modeling climate change, ecosystems, and pollution.
+- Social Sciences: Modeling behavior, opinion dynamics, and social networks.
+
+## The Modeling Process:
+
+Mathematical modeling involves several key steps:
+  
+  1. Problem Formulation: Clearly define the problem you want to model. Identify the key variables, assumptions, and constraints.
+2. Mathematical Representation: Choose appropriate mathematical equations or algorithms that represent the problem.
+3. Parameter Estimation: Determine the values of model parameters using data or expert knowledge.
+4. Validation: Test the model's accuracy by comparing its predictions to real-world observations.
+5. Simulation and Analysis: Use the model to perform simulations and analyze the results.
+6. Interpretation: Interpret the model's findings and draw conclusions.
+7. Communication: Communicate the results and insights to stakeholders through reports, presentations, or visualizations.
+
+## Types of Mathematical Models:
+
+There are various types of mathematical models, including:
+  
+  - Deterministic Models: Based on precise mathematical equations with fixed parameters.
+- Stochastic Models: Incorporate randomness and uncertainty into the modeling process.
+- Continuous Models: Represent phenomena that change continuously over time or space.
+- Discrete Models: Model phenomena that change in discrete steps or intervals.
+- Analytical Models: Solvable using mathematical techniques.
+- Numerical Models: Require computational methods for solution.
+
+During this module we will mostly be focused on Determininistic Models and Analytical Models.
+
+## Challenges in Mathematical Modeling:
+
+Mathematical modeling is a powerful tool but comes with challenges:
+  
+- Data Availability: Accurate and relevant data is essential for model development and validation.
+- Complexity: Real-world systems can be highly complex, requiring simplifications and assumptions.
+- Parameter Estimation: Determining accurate parameter values can be challenging.
+- Uncertainty: Dealing with uncertainty and variability in models is crucial.
+- Model Validation: Ensuring that models accurately represent reality is an ongoing process.
+
+## Exercise
+
+In groups of 3, think about a phenomena you might want to model (Weather, Stock Prices, Spread of COVID-19 etc...) Think about how you might model this? What data would you need? What factors would you like to include in your model? How would you test to see if the model was working?
+  
+## Tools and Software:
+  
+Mathematical modeling often involves the use of software tools and programming languages such as MATLAB, Python, R, and specialized modeling software like COMSOL, Simulink, or specialized domain-specific software.

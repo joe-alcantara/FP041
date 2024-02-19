@@ -1,0 +1,85 @@
+---
+title: "Week 10 - Putting it all together"
+format: pdf
+--- 
+
+-
+Week 10 - Putting it all together
+- Describe and apply the entire mathematical modelling process
+
+Introduction:
+
+Welcome to this comprehensive lecture on the entire mathematical modeling process.
+Mathematical modeling is a systematic approach to understanding, analyzing, and solving complex real-world problems using mathematical techniques.
+In this lecture, we will cover the key stages and steps involved in the mathematical modeling process.
+Stage 1: Problem Formulation:
+
+The mathematical modeling process begins with identifying and defining a real-world problem that can be addressed using mathematics.
+Key components of problem formulation include:
+Clearly stating the problem.
+Identifying the relevant variables and parameters.
+Establishing assumptions and constraints.
+Defining the goals and objectives of the modeling effort.
+Stage 2: Mathematical Representation:
+
+Once the problem is formulated, mathematical equations, models, or algorithms are chosen to represent the system or phenomenon being studied.
+Selection of the appropriate mathematical framework depends on the nature of the problem:
+Differential equations for dynamic systems.
+Algebraic equations for steady-state problems.
+Statistical models for data-driven analysis.
+Optimization models for decision-making.
+Stage 3: Parameter Estimation:
+
+Model parameters, which are often unknown, need to be estimated based on data or expert knowledge.
+Parameter estimation techniques may include statistical methods, optimization algorithms, or calibration processes.
+Accurate parameter values are crucial for the model's validity and reliability.
+Stage 4: Model Validation:
+
+Model validation involves comparing the predictions of the mathematical model to real-world observations or experimental data.
+Various validation techniques, such as goodness-of-fit tests, cross-validation, and sensitivity analysis, are used to assess the model's accuracy and reliability.
+Model validation helps ensure that the model accurately represents the real system.
+Stage 5: Simulation and Analysis:
+
+With a validated model, simulations are performed to study the system's behavior under various conditions and scenarios.
+Data generated from simulations are analyzed to gain insights into system dynamics, trends, and performance.
+Sensitivity analysis can be conducted to understand the impact of parameter variations on model outcomes.
+Stage 6: Interpretation and Decision-Making:
+
+Interpretation involves drawing meaningful conclusions from the modeling results.
+Model insights guide decision-making processes and help solve the original problem.
+Stakeholders and decision-makers are presented with findings, recommendations, and implications.
+Stage 7: Communication:
+
+Effective communication of modeling results is essential for conveying insights to a wider audience.
+Reports, presentations, visualizations, and documentation are used to communicate findings and facilitate understanding.
+Clear communication ensures that the modeling results are actionable.
+Iterative Nature of Modeling:
+
+It's important to note that mathematical modeling is often an iterative process:
+Models may need to be refined or adjusted based on validation results.
+New data or information may require updates to the model.
+Additional complexities or factors may need to be incorporated as the understanding of the problem deepens.
+Tools and Software:
+
+Mathematical modeling often involves the use of specialized software tools, programming languages (e.g., MATLAB, Python), and computational resources.
+These tools assist in solving complex mathematical equations, conducting simulations, and analyzing data.
+Conclusion:
+
+The mathematical modeling process is a systematic and rigorous approach to solving real-world problems using mathematical techniques.
+It involves stages of problem formulation, mathematical representation, parameter estimation, model validation, simulation, interpretation, communication, and often iterative refinements.
+Mathematical modeling is a powerful tool with applications in various fields, including science, engineering, economics, biology, and social sciences.
+Q&A Session:
+
+Please feel free to ask any questions related to the mathematical modeling process.
+
+# Theoretical Questions
+
+# Practical Questions
+
+# To complete for Week 11
+
+- [ ] Install R
+- [ ] Install R Studio
+- [ ] Install the following libraries
+- [ ] Create a R Markdown File
+- [ ] Save your R Markdown File as a pdf

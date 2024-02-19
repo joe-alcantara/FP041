@@ -1,0 +1,74 @@
+---
+title: "Week 5 - Visualisations in Mathematical Modelling"
+format: pdf
+---
+
+## Introduction:
+
+Welcome to this lecture on the role of visualizations in mathematical modeling.
+Visualizations play a crucial role in understanding, interpreting, and communicating complex mathematical models.
+
+## Importance of Visualizations:
+
+Visualizations are powerful tools for representing data, model results, and relationships between variables. They enhance our ability to explore, analyze, and gain insights from mathematical models. Effective visualizations aid in model development, validation, and decision-making.
+
+## Types of Visualizations:
+
+There are various types of visualizations used in mathematical modeling:
+
+1. Scatter Plots:
+
+Scatter plots display individual data points as points on a graph.
+They are useful for exploring relationships between two continuous variables.
+Scatter plots can reveal trends, clusters, and outliers.
+
+2. Line Plots:
+
+Line plots show the change in one or more variables over a continuous domain (e.g., time). They are often used for time series data or to visualize functions.
+
+3. Histograms and Frequency Distributions:
+
+Histograms display the distribution of a single variable by dividing it into intervals (bins) and counting the number of observations in each bin. They provide insights into the data's central tendency, variability, and shape.
+
+4. Box Plots (Box-and-Whisker Plots):
+
+Box plots summarize the distribution of a dataset by displaying its quartiles, median, and potential outliers. They help visualize the spread and skewness of data.
+
+5. Heatmaps:
+
+Heatmaps use colors to represent data values in a two-dimensional matrix.
+They are useful for visualizing relationships in large datasets, such as correlation matrices.
+
+6. Contour Plots:
+
+Contour plots show the level curves of a two-dimensional function.
+They are often used in mathematical modeling to represent surfaces or contour maps.
+
+7. 3D Plots:
+
+3D plots visualize three-dimensional functions or datasets. They provide a spatial view of the data or model.
+
+8. Geographic Maps:
+
+Geographic maps display data geospatially. They are used in modeling applications related to geography, such as climate modeling or disease spread.
+
+9. Network Graphs:
+
+Network graphs represent relationships between entities (nodes) and their connections (edges). They are employed in modeling complex networks, such as social networks or transportation systems.
+
+10. Animated Visualizations:
+
+Animated visualizations show how data or model results change over time.
+They are valuable for dynamic modeling scenarios, such as simulations.
+
+## Benefits of Visualizations in Mathematical Modeling:
+
+**Enhance Understanding:** Visualizations make complex data and models more accessible and interpretable.
+**Facilitate Communication:** Visualizations help convey findings and insights to a broad audience.
+**Detect Patterns:** Visualizations reveal patterns, trends, and outliers in the data.
+**Model Validation:** Visualizations aid in comparing model predictions to observed data.
+**Decision Support:** Visualizations assist in decision-making by providing a clear view of model outcomes.
+
+## Conclusion:
+
+Visualizations are indispensable in mathematical modeling, helping researchers and analysts explore data, communicate findings, and validate models. The choice of visualization depends on the type of data and the modeling goals. Effective visualizations enhance model understanding and support informed decision-making.

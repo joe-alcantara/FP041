@@ -1,0 +1,29 @@
+---
+title: "Week 2 - Introduction to Mathematical Modelling"
+execute: 
+  error: true
+format: pdf
+---
+
+## Practical Exercises
+
+It’s good practice to answer these questions in R Markdown, producing a knitted file (html, pdf or docx).
+
+1. Look up the help documentation for the function rep(). Use this function to create the following 3 vectors.
+    - [1] 0 0 0 0 0
+    - [1] 1 2 3 1 2 3 1 2 3 1 2 3
+    - [1] 4 5 5 6 6 6
+2. Explain what is the problem in each line of code below. Fix the code so it will run properly.
+    - my variable <- 3
+    - seq(1, 10 by = 2)
+    - Library(cars)
+
+3. Look up the help documentation for the function cut().
+    - Describe the purpose of this function. What kind of data type(s) does this function accept? Which arguments/options are required? Which arguments are not required and what are their default value(s)?
+    - Create an example vector and use the cut() function on it. Explain your results.
+
+4. Load the mtcars dataset by using the code data(mtcars). Find the minimum, mean, median and maximum of the variable mpg in the mtcars dataset using just one line of code. We have not covered a function that does this yet, so the main point of this question is to get you used to using the resources you have available to find an answer. Describe the process you used (searched online? use the class textbook?) to find the answer.
+
+5. Look up the functions arrange() and relocate(). Input the variable phisp from cacounty in each function. What are the functions doing?
+
+6. Use the function bind_rows() to create a new dataset called cacounty_brows that combines ca1 and ca2. Describe the structure of this new dataset. Do the same for the function bind_cols() (name the new dataset cacounty_bcols). How is bind_cols() different from left_join()?

@@ -1,0 +1,72 @@
+---
+title: "Week 4 - Descriptive Statistics in Mathematical Modelling"
+format: pdf 
+---
+
+# Introduction:
+
+Welcome to this Module on Measures of Central Tendency and Measures of Variability in the context of mathematical modeling. These statistical concepts play a crucial role in summarizing and understanding data, which is essential for building accurate mathematical models.
+
+## Measures of Central Tendency:
+
+Measures of central tendency help us find the "center" or typical value of a dataset.
+
+1. Mean (Average):
+
+The mean is calculated by adding up all the values in a dataset and dividing by the number of observations. It is sensitive to outliers and can be skewed by extreme values.
+
+The formula for the mean (μ) of a dataset with n observations is:
+
+μ = (Σxi) / n
+
+2. Median:
+
+The median is the middle value when the data is arranged in ascending or descending order. It is not affected by extreme outliers and is a robust measure of central tendency. For datasets with an even number of observations, the median is the average of the two middle values.
+
+3. Mode:
+
+The mode is the value that appears most frequently in the dataset.
+Some datasets may have multiple modes (bimodal, trimodal, etc.), while others may have no mode (no value occurs more than once).
+
+## Measures of Variability:
+
+Measures of variability quantify how spread out or dispersed the data points are from the central tendency.
+
+1. Range:
+
+The range is the difference between the maximum and minimum values in the dataset.
+It is simple to calculate but sensitive to outliers.
+
+2. Variance and Standard Deviation:
+
+Variance measures the average squared deviation of each data point from the mean.
+
+Standard deviation is the square root of the variance.
+
+A smaller standard deviation indicates less variability in the data, while a larger one suggests greater variability.
+
+The formulas for variance (σ^2) and standard deviation (σ) are:
+
+σ^2 = Σ(xi - μ)^2 / n
+
+σ = √(Σ(xi - μ)^2 / n)
+
+3. Interquartile Range (IQR):
+
+IQR is the range of the middle 50% of the data and is calculated as the difference between the third quartile (Q3) and the first quartile (Q1).
+It is less sensitive to outliers compared to the range.
+
+## Applications in Mathematical Modeling:
+
+Measures of central tendency and variability are vital in mathematical modeling for various reasons:
+
+- They help summarize and understand the data used to build models.
+- They provide insights into the distribution and characteristics of the data.
+- They help identify outliers and understand their impact on the model.
+- They guide the selection of appropriate probability distributions for modeling uncertainty.
+
+## Conclusion:
+
+Measures of central tendency (mean, median, mode) and variability (range, variance, standard deviation, IQR) are essential statistical tools for summarizing and understanding data in the context of mathematical modeling.
+
+These measures assist in characterizing the central behavior and spread of data, aiding model development, and decision-making.

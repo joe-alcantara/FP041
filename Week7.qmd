@@ -1,0 +1,88 @@
+---
+title: "Week 7 - Evaluating Classification Models"
+format: pdf
+---
+
+Week 7 - Evaluation of Classification Models
+- Accuracy, Sensitivity, Specificity, Confusion Matrices, F1 Score and Area Under the Curve
+
+Introduction:
+
+Welcome to this lecture on the various methods used to evaluate classification models.
+Evaluating the performance of a classification model is crucial for assessing its accuracy and effectiveness.
+In this lecture, we will explore several key evaluation metrics and techniques used in the field of machine learning.
+Importance of Model Evaluation:
+
+Model evaluation helps us understand how well a classification model is performing.
+It provides insights into a model's strengths and weaknesses.
+Evaluation metrics guide model selection, hyperparameter tuning, and ultimately, decision-making in real-world applications.
+Common Evaluation Metrics:
+
+There are several common evaluation metrics used for classification models:
+1. Accuracy:
+
+Accuracy is the most straightforward metric, measuring the ratio of correctly predicted instances to the total number of instances.
+It is suitable when classes are balanced, but it may not be informative for imbalanced datasets.
+2. Precision:
+
+Precision measures the ratio of true positives (correctly predicted positive instances) to the total predicted positive instances.
+It focuses on the accuracy of positive predictions and is useful when minimizing false positives is essential.
+3. Recall (Sensitivity or True Positive Rate):
+
+Recall measures the ratio of true positives to the total actual positive instances.
+It assesses the model's ability to identify all positive instances and is essential when minimizing false negatives is critical.
+4. F1-Score:
+
+The F1-Score is the harmonic mean of precision and recall.
+It provides a balance between precision and recall, making it suitable for imbalanced datasets.
+5. ROC Curve (Receiver Operating Characteristic Curve):
+
+The ROC curve plots the true positive rate (recall) against the false positive rate at various decision thresholds.
+It helps visualize a model's trade-off between sensitivity and specificity.
+The Area Under the ROC Curve (AUC-ROC) quantifies the overall performance of the model.
+6. Precision-Recall Curve:
+
+The precision-recall curve plots precision against recall for different decision thresholds.
+It is particularly useful when dealing with imbalanced datasets and focuses on positive class predictions.
+7. Confusion Matrix:
+
+A confusion matrix provides a detailed breakdown of a model's predictions.
+It includes counts of true positives, true negatives, false positives, and false negatives.
+Methods of Evaluation:
+
+Model evaluation involves various techniques to assess a classification model's performance:
+1. Cross-Validation:
+
+Cross-validation (e.g., k-fold cross-validation) splits the dataset into multiple subsets (folds) for training and testing.
+It helps estimate a model's performance on unseen data and reduces overfitting.
+2. Train-Test Split:
+
+A common approach is to split the dataset into a training set and a testing set.
+The model is trained on the training set and evaluated on the testing set.
+3. Stratified Sampling:
+
+When dealing with imbalanced datasets, stratified sampling ensures that the training and testing sets maintain the same class distribution.
+4. Leave-One-Out Cross-Validation (LOOCV):
+
+LOOCV is a special case of cross-validation where each data point is treated as a test sample once, and the model is trained on the remaining data.
+It is useful for small datasets but can be computationally expensive.
+Conclusion:
+
+Evaluating classification models is a critical step in the machine learning workflow.
+Various metrics, such as accuracy, precision, recall, F1-score, ROC curves, and confusion matrices, provide insights into model performance.
+Techniques like cross-validation, train-test splits, and stratified sampling help ensure robust evaluation.
+Q&A Session:
+
+Please feel free to ask any questions related to methods of evaluating classification models.
+
+# Theoretical Questions
+
+# Practical Questions
+
+# To complete for Week 8
+
+- [ ] Install R
+- [ ] Install R Studio
+- [ ] Install the following libraries
+- [ ] Create a R Markdown File
+- [ ] Save your R Markdown File as a pdf

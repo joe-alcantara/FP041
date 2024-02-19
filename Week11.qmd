@@ -4,71 +4,82 @@ format: pdf
 ---
 
 Week 11 - Application of Mathematical Models
-- Taking a number of problems and applying the mathematical process to this.
 
-Introduction:
+## Introduction:
 
-Welcome to this lecture on the diverse and wide-ranging applications of mathematical modeling.
-Mathematical modeling is a versatile and powerful tool used across various disciplines to solve complex real-world problems.
-In this lecture, we will explore a multitude of applications where mathematical modeling plays a crucial role.
-Applications in Science and Engineering:
+Welcome to this lecture on the diverse and wide-ranging applications of mathematical modeling. Mathematical modeling is a versatile and powerful tool used across various disciplines to solve complex real-world problems. In this lecture, we will explore a multitude of applications where mathematical modeling plays a crucial role.
+
+## Applications in Science and Engineering:
 
 1. Physics:
 
-Mathematical models are fundamental in physics to describe and predict physical phenomena, from classical mechanics to quantum physics.
-Examples include modeling the motion of celestial bodies, understanding fluid dynamics, and simulating electromagnetic interactions.
+Mathematical models are fundamental in physics to describe and predict physical phenomena, from classical mechanics to quantum physics. Examples include modeling the motion of celestial bodies, understanding fluid dynamics, and simulating electromagnetic interactions.
+
 2. Engineering:
 
-Engineering applications of mathematical modeling encompass fields like civil, mechanical, electrical, and chemical engineering.
-Models are used to design structures, optimize processes, and predict behavior under different conditions.
+Engineering applications of mathematical modeling encompass fields like civil, mechanical, electrical, and chemical engineering. Models are used to design structures, optimize processes, and predict behavior under different conditions.
+
 3. Environmental Science:
 
 Mathematical modeling is essential for studying and predicting environmental processes, including climate modeling, air and water quality assessment, and ecosystem dynamics.
+
 4. Materials Science:
 
 Materials scientists use mathematical models to understand the properties and behavior of materials, leading to innovations in materials design and development.
-Applications in Biology and Medicine:
+
+### Applications in Biology and Medicine:
 
 5. Epidemiology:
 
 Mathematical models are critical in epidemiology for studying disease spread, predicting outbreaks, and evaluating the effectiveness of public health interventions.
+
 6. Pharmacokinetics:
 
 Pharmacokinetic models describe how drugs are absorbed, distributed, metabolized, and excreted in the body, aiding drug development and dosage optimization.
+
 7. Neuroscience:
 
 Mathematical models help in understanding neural networks, brain function, and diseases of the nervous system, contributing to advancements in neurobiology and medicine.
+
 8. Genetics:
 
 Genetic models are used to study inheritance patterns, population genetics, and the evolution of species.
-Applications in Economics and Finance:
+
+### Applications in Economics and Finance:
 
 9. Macroeconomics:
 
 Mathematical models are employed to analyze economic systems, fiscal policies, and economic growth.
+
 10. Financial Markets:
 
 Models such as the Black-Scholes model are used to price financial derivatives, while time series analysis models forecast market trends.
-Applications in Social Sciences:
+
+### Applications in Social Sciences:
 
 11. Sociology:
 
 Mathematical models are used to study social networks, cultural dynamics, and human behavior, helping to address societal challenges.
+
 12. Psychology:
 
 Mathematical modeling aids in understanding cognitive processes, decision-making, and psychological disorders.
-Applications in Technology and Industry:
+
+### Applications in Technology and Industry:
 
 13. Computer Science:
 
 Mathematical models underpin algorithms, machine learning models, and computer simulations used in various applications, including artificial intelligence.
+
 14. Manufacturing:
 
 Optimization models and simulations are used to improve manufacturing processes, supply chain management, and quality control.
+
 15. Aerospace:
 
 Mathematical models are crucial in designing and simulating aircraft and spacecraft systems, ensuring safety and efficiency.
-Applications in Environmental Management:
+
+### Applications in Environmental Management:
 
 16. Climate Modeling:
 
@@ -77,14 +88,7 @@ Climate models help predict climate change, assess its impact, and inform polici
 17. Natural Resource Management:
 
 Models are used to optimize resource allocation and conservation efforts in forestry, fisheries, and wildlife management.
-Conclusion:
 
-Mathematical modeling is a versatile tool that spans a wide range of applications across science, engineering, medicine, economics, social sciences, technology, and environmental management.
-It plays a pivotal role in advancing knowledge, solving real-world problems, and driving innovation in virtually every field of study and industry.
-Q&A Session:
+## Conclusion:
 
-Please feel free to ask any questions related to the applications of mathematical modeling.
-
-# Theoretical Questions
-
-# Practical Questions
+Mathematical modeling is a versatile tool that spans a wide range of applications across science, engineering, medicine, economics, social sciences, technology, and environmental management. It plays a pivotal role in advancing knowledge, solving real-world problems, and driving innovation in virtually every field of study and industry.

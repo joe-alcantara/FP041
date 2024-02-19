@@ -3,15 +3,12 @@ title: "Week 3 - Concepts in Mathematical Modelling"
 format: pdf
 ---
 
-Week 3 - Concepts in Mathematical Modelling
-- Sampling
-- understanding the problem, choosing variables, making assumptions, solving the equations, interpreting the solution, validating the model, and criticizing and improving the model.
-
 ## Introduction:
 
 Mathematical modeling is a critical tool for understanding, analyzing, and solving complex real-world problems across various disciplines. In this module, we will delve into the core concepts of mathematical modeling and how it is applied in practice.
 
 ## Learning objectives
+
 - Understand what models and mathematical models are.
 - Think about a real-world problem from a modelling perspective
 - Framework of modelling
@@ -24,15 +21,15 @@ There are three components of a model.
 - Simple
 - Flexible
 
-An example of a Physical Model
+**An example of a Physical Model**
 - Normally a prototype (constructed copy) of a real object
 - Examples: model building, bridges, airplane, solar system
 
-An example of a Schematic Model
+**An example of a Schematic Model**
 - Normally used to visualize a system structure
 - Examples: Organisation charts, Maps, Diagrams, Process charts
 
-An example of a Mathematical Model
+**An example of a Mathematical Model**
 - A simple and flexible representation of a real object or phenomena using mathematical language
 - Examples: Algebraic equations, Differential equation, Algorithm
   - For data science: descriptive and inferential statistics

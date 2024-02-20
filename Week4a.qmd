@@ -5,7 +5,25 @@ format: pdf
 
 # Introduction:
 
-Welcome to this Module on Measures of Central Tendency and Measures of Variability in the context of mathematical modeling. These statistical concepts play a crucial role in summarizing and understanding data, which is essential for building accurate mathematical models.
+Welcome to this Module on Measures of Central Tendency and Measures of Variability in the context of mathematical modeling. 
+
+Descriptive statistics play a critical role in the context of mathematical modeling for several reasons. They provide a set of tools that help in summarizing and understanding the characteristics of a dataset, which is essential for the development, analysis, and validation of mathematical models. Here are some key reasons why descriptive statistics are useful in this context:
+
+**Understanding Data Distribution:** Descriptive statistics help in understanding the distribution of the data. Measures such as mean, median, and mode give insights into the central tendency of the data, while variance and standard deviation offer information about the data's spread. Knowing the distribution helps in choosing the appropriate mathematical model that fits the data.
+
+**Identifying Outliers:** Outliers can significantly affect the performance and accuracy of a mathematical model. Descriptive statistics enable the identification of outliers, which can then be analyzed to determine if they are errors or if they represent valuable extremes that should be included in the modeling process.
+
+**Data Summarization:** In mathematical modeling, it is often necessary to present data in a summarized form to simplify analysis and interpretation. Descriptive statistics provide a concise description of the dataset through measures of central tendency and variability, making it easier to understand the overall characteristics of the data.
+
+**Model Assumption Verification:** Many mathematical models make assumptions about the underlying distribution of the data (e.g., normality). Descriptive statistics can be used to verify these assumptions through graphical representations like histograms and Q-Q plots, ensuring that the chosen model is appropriate for the data.
+
+**Comparing Data Sets:** Descriptive statistics are useful for comparing datasets, which is often required in modeling to understand changes over time or differences between groups. This comparison can inform model development and help in evaluating the model's effectiveness across different conditions or populations.
+
+**Feature Selection and Engineering:** In the process of building a mathematical model, selecting the right features (variables) is crucial. Descriptive statistics can highlight relationships between variables through correlation coefficients and covariance, aiding in the selection of relevant features for the model.
+
+**Model Validation and Improvement:** After a model has been developed, descriptive statistics are used to validate the model's performance by comparing predicted values against actual values. This process often involves analyzing residuals (the differences between observed and predicted values) to identify patterns that could suggest improvements to the model.
+
+For the purposes of this model, we will be focusing on using descriptive statistics to understand data distributions, identify outliers and to summarize data.
 
 ## Measures of Central Tendency:
 

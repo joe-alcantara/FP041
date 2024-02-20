@@ -3,20 +3,19 @@ title: "Week 9 - Evaluation of Regression Models"
 format: pdf
 ---
 
-Week 9 - Evaluation of Regression Models
-- Application to datasets
-
-Introduction:
+## Introduction:
 
 Welcome to this lecture on methods of evaluating regression models.
 Regression models are essential in mathematical modeling and data analysis, and their performance needs to be assessed rigorously.
 In this lecture, we will explore various evaluation methods and metrics used to assess the quality and accuracy of regression models.
-Importance of Model Evaluation:
+
+## Importance of Model Evaluation:
 
 Model evaluation is critical to determine how well a regression model fits the data and makes predictions.
 It helps in selecting the best model among competing models and guides model refinement.
 Accurate model evaluation is essential for making informed decisions in various fields, including economics, engineering, and the sciences.
-Common Evaluation Metrics:
+
+## Common Evaluation Metrics:
 
 Several metrics are commonly used to evaluate regression models:
 1. Mean Squared Error (MSE):
@@ -44,44 +43,35 @@ R² = 1 - (SSE / SST), where SSE is the sum of squared errors and SST is the tot
 Adjusted R² adjusts R² for the number of predictors in the model.
 It penalizes the addition of unnecessary variables.
 Adjusted R² = 1 - [(1 - R²) * ((n - 1) / (n - p - 1))], where n is the number of data points and p is the number of predictors.
-Model Validation Techniques:
+
+## Model Validation Techniques:
 
 Various techniques are used to validate regression models:
+
 1. Residual Analysis:
 
 Residuals are the differences between actual and predicted values.
 Residual plots are used to assess the distribution and pattern of residuals.
 Patterns in residuals may indicate violations of model assumptions.
+
 2. Cross-Validation:
 
 Cross-validation techniques (e.g., k-fold cross-validation) divide the dataset into training and testing sets multiple times to assess model performance.
 It helps estimate how the model will generalize to new, unseen data.
+
 3. Overfitting and Underfitting:
 
 Overfitting occurs when a model is too complex and fits the noise in the data.
 Underfitting happens when a model is too simple and fails to capture the underlying relationships.
 Model complexity should be carefully balanced.
+
 4. Feature Importance:
 
 Assessing the importance of predictor variables helps in model interpretation.
 Techniques like feature selection or permutation importance can identify important predictors.
-Conclusion:
+
+## Conclusion:
 
 Evaluating regression models is essential to determine their accuracy, reliability, and suitability for a given problem.
 Metrics like MSE, RMSE, MAE, R², and adjusted R² provide valuable insights into a model's performance.
 Model validation techniques and residual analysis help ensure robust and interpretable regression models.
-Q&A Session:
-
-Please feel free to ask any questions related to evaluating regression models.
-
-# Theoretical Questions
-
-# Practical Questions
-
-# To complete for Week 10
-
-- [ ] Install R
-- [ ] Install R Studio
-- [ ] Install the following libraries
-- [ ] Create a R Markdown File
-- [ ] Save your R Markdown File as a pdf

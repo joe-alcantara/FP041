@@ -6,21 +6,36 @@ format: pdf
 ## Introduction:
 
 Welcome to this lecture on the role of visualizations in mathematical modeling.
-Visualizations play a crucial role in understanding, interpreting, and communicating complex mathematical models.
 
-## Importance of Visualizations:
+Tables and visualizations are indispensable tools in the context of mathematical modeling, offering a powerful means to analyze, interpret, and communicate complex data and model results. Their utility spans across various stages of the mathematical modeling process, from initial data exploration to the presentation of final model outcomes. Here’s why using tables and visualizations is particularly beneficial in this context:
 
-Visualizations are powerful tools for representing data, model results, and relationships between variables. They enhance our ability to explore, analyze, and gain insights from mathematical models. Effective visualizations aid in model development, validation, and decision-making.
+**Enhanced Data Understanding:** Tables organize data in a structured format, making it easier to identify patterns, trends, and anomalies. Visualizations such as graphs, charts, and heat maps provide an immediate visual context that can reveal insights which might not be obvious from raw data alone. This enhanced understanding is crucial for selecting the appropriate model and for feature engineering.
 
-## Types of Visualizations:
+**Effective Communication:** Mathematical models often involve complex computations and concepts that can be challenging to explain. Tables and visualizations simplify the communication of these complexities, making the models more accessible to non-expert stakeholders. They can effectively convey key findings, model performance metrics, and comparison of model predictions with actual data.
 
-There are various types of visualizations used in mathematical modeling:
+**Assumptions and Relationships Exploration:** Before developing a model, it’s important to explore the relationships between variables. Scatter plots, correlation matrices, and other visual tools help in understanding these relationships and in verifying the assumptions of the model, such as linearity or distributional assumptions.
+
+**Model Validation and Diagnosis:** After a model is built, visualizations are crucial for validating the model and diagnosing issues. Residual plots, for example, can help identify patterns of errors in predictions, indicating potential problems with the model, such as non-linearity or heteroscedasticity. Comparison of actual vs. predicted outcomes through visual plots can also highlight the model's accuracy and areas for improvement.
+
+**Comparative Analysis:** Tables and visualizations facilitate the comparison of different models or different versions of a model. Through side-by-side comparisons or overlaying plots, one can easily assess which model performs better based on various metrics, leading to more informed decision-making.
+
+**Interactivity and Exploration:** Interactive visualizations allow users to explore data and model results in more depth. For instance, adjusting parameters to see real-time effects on outcomes can provide insights into the sensitivity of the model and help in understanding how different variables influence predictions.
+
+**Decision Making and Strategic Insights:** Ultimately, the goal of mathematical modeling is often to inform decision-making. Tables and visualizations distill complex model outputs into actionable insights, highlighting key takeaways and guiding strategic decisions. For example, a well-designed dashboard can provide a comprehensive overview of model results, trends over time, and predictive forecasts, all of which are critical for making informed decisions.
+
+In summary, tables and visualizations bridge the gap between complex mathematical models and practical application, making them essential tools in the mathematical modeling process. They enhance understanding, facilitate communication, aid in model validation and comparison, enable deeper exploration, and support decision-making, thereby maximizing the value derived from models.
+
+## Tables
+
+
+
+## Plots
+
+There are various types of plots used in mathematical modeling:
 
 1. Scatter Plots:
 
-Scatter plots display individual data points as points on a graph.
-They are useful for exploring relationships between two continuous variables.
-Scatter plots can reveal trends, clusters, and outliers.
+Scatter plots display individual data points as points on a graph. They are useful for exploring relationships between two continuous variables. Scatter plots can reveal trends, clusters, and outliers.
 
 2. Line Plots:
 
@@ -36,8 +51,7 @@ Box plots summarize the distribution of a dataset by displaying its quartiles, m
 
 5. Heatmaps:
 
-Heatmaps use colors to represent data values in a two-dimensional matrix.
-They are useful for visualizing relationships in large datasets, such as correlation matrices.
+Heatmaps use colors to represent data values in a two-dimensional matrix. They are useful for visualizing relationships in large datasets, such as correlation matrices.
 
 6. Contour Plots:
 

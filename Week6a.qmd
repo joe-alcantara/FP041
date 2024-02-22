@@ -1,0 +1,126 @@
+---
+title: "Week 6 - Introduction to Classification"
+format: pdf
+---
+
+## Introduction:
+
+Welcome to this lecture on basic classification models used in statistical modelling, with a particular emphasis on the k-Nearest Neighbors (k-NN) algorithm. Classification is a fundamental task in statistical modelling, where the goal is to assign input data points to predefined categories or classes.
+
+Classification algorithm is a Supervised Learning technique used to categorize new observations. In classification, a program uses the dataset or observations provided to learn how to categorize new observations into various classes or groups. For instance, 0 or 1, red or blue, yes or no, spam or not spam, etc. Targets, labels, or categories can all be used to describe classes. The Classification algorithm uses labeled input data because it is a supervised learning technique and comprises input and output information. A discrete output function (y) is transferred to an input variable in the classification process (x).
+
+In simple words, classification is a type of pattern recognition in which classification algorithms are performed on training data to discover the same pattern in new data sets.
+
+::: {.callout-tip}
+## Exercise
+
+a) When scrolling through your e-mail inbox, what factors do you take into account when you decide if an e-mail is spam or not?
+
+b) When a bank looks at a transaction, what factors do you think it takes into account when they decide if a transaction is fraudulent or not?
+:::
+
+## 
+
+## Applications of Classification models:
+
+Classification models are a cornerstone of machine learning, used across a wide range of industries and applications to categorize data into predefined classes or categories. These models can handle both binary classification (two classes) and multi-class classification (more than two classes) problems. Here are some of the key applications of classification models:
+
+**Spam Detection:** In email filtering systems, classification models are used to distinguish between spam and non-spam emails, helping to protect users from unwanted email content.
+
+**Fraud Detection:** Financial institutions use classification models to identify potentially fraudulent transactions. These models analyze transaction patterns to flag unusual activities that could indicate fraud.
+
+**Customer Segmentation:** Companies apply classification models to customer data to segment customers into different groups based on their behaviors, preferences, or demographic characteristics. This segmentation supports personalized marketing strategies.
+
+**Image Recognition:** In computer vision, classification models identify and categorize objects within images. This technology is used in applications ranging from security surveillance to medical imaging.
+
+**Sentiment Analysis:** Classification models analyze text data from sources like social media, reviews, and surveys to determine the sentiment expressed (positive, negative, neutral) towards products, services, or topics.
+
+**Disease Diagnosis:** In healthcare, classification models assist in diagnosing diseases by analyzing medical images, patient data, and test results. These models can help in early detection and treatment planning.
+
+**Credit Scoring:** Banks and lending institutions use classification models to assess the creditworthiness of borrowers. These models analyze financial histories and personal information to classify individuals into different risk categories.
+
+**Natural Language Processing (NLP):** Classification models are used in NLP for tasks like language detection, topic classification, and identifying the parts of speech in text data.
+
+**Recommendation Systems:** E-commerce and streaming platforms use classification to categorize users and items, helping to drive personalized recommendations based on user preferences and behavior.
+
+**Predictive Maintenance:** In manufacturing and industrial settings, classification models predict equipment failures by classifying the state of machinery based on sensor data and historical records. This helps in scheduling maintenance to prevent unexpected downtimes.
+
+**Voice Recognition:** Classification models are crucial in recognizing and categorizing spoken words into text, enabling voice-controlled applications and devices.
+
+**Environmental Monitoring:** Classification models are used in monitoring and managing natural resources, such as classifying land use in satellite images or detecting pollutants in water sources.
+
+## Basic Classification Models:
+
+There are several basic classification models, each with its own characteristics and applications:
+
+1. Logistic Regression:
+
+Logistic regression is a linear model used for binary classification (two classes). It models the probability of an input belonging to one of the two classes using a logistic (S-shaped) curve.
+
+2. Decision Trees:
+
+Decision trees are versatile models that can be used for both binary and multi-class classification. They partition the input space into regions based on a series of if-then-else rules.
+
+3. Naïve Bayes:
+
+Naïve Bayes is a probabilistic model that is particularly useful for text classification and spam detection. It relies on Bayes' theorem and assumes independence between features.
+
+4. k-Nearest Neighbors (k-NN):
+
+k-NN is a non-parametric and instance-based classification algorithm.
+It classifies data points based on their proximity to other data points in the feature space.
+
+For the purposes of this module, we will be focused on k-nearest neighbours.
+
+## k-Nearest Neighbors (k-NN):
+
+k-NN is a simple yet effective classification algorithm that works based on the premise that the closer two data points are together, the more likely they are of the same class. Lets consider a simple example with tumor size and whether they are benign or malignant.
+
+
+
+It classifies a data point by considering the class labels of its k-nearest neighbors in the feature space.
+
+The k-NN Algorithm:
+
+1. Choose the value of k, the number of nearest neighbors to consider (an odd number is often chosen to avoid ties).
+2. Compute the distance between the input data point and all other data points in the dataset (common distance metrics include Euclidean, Manhattan, and Minkowski).
+3. Select the k-nearest neighbors based on the computed distances.
+4. Count the class labels of the k-nearest neighbors and assign the majority class label to the input data point.
+
+## The intuition behind the k-nearest-neighbours model.
+
+Lets think about the k-NN model intuitively. What we are basically saying is, if two objects share similar characteristics, they may be the same class of object. Now, of course that may also not be true for many reasons and we can be critical of this as a model later, but for now lets think about 
+
+## Parameters of k-NN:
+
+Two main parameters in k-NN are:
+
+*k:* The number of nearest neighbors to consider (a hyperparameter that needs to be tuned).
+*Distance metric:* The measure used to calculate the distance between data points.
+
+## Distance Metrics
+
+Strengths and Weaknesses of k-NN:
+
+Strengths:
+Simplicity and ease of implementation.
+No assumptions about the underlying data distribution.
+Can handle both binary and multi-class classification.
+Weaknesses:
+Sensitive to the choice of k.
+Computationally expensive for large datasets.
+Affected by irrelevant or noisy features.
+Applications of k-NN:
+
+k-NN is used in various applications, including:
+Image classification.
+Recommender systems.
+Anomaly detection.
+Medical diagnosis.
+Text categorization.
+And more.
+Conclusion:
+
+Classification is a fundamental task in machine learning, and there are several basic models to choose from.
+k-NN is an intuitive and straightforward classification algorithm that relies on proximity in the feature space.
+Understanding the strengths, weaknesses, and parameters of k-NN is essential for effective model selection and application.

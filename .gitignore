@@ -1,2 +1,5 @@
 # ignore ALL files in ANY directory named .venv
 .venv/
+media/
+__pycache__
+

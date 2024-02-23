@@ -241,7 +241,6 @@ The key attributes of a good model.
   - Appropriate balance between accuracy, simplicity and flexibility
 2. For statistical predictive model: How easy is it to use your model for different types of data (replicability)
 
-
 ## Drawbacks of Modelling
 
 Assumptions: Many statistical and mathematical models rely on strict assumptions about the data, such as linearity, normality, independence, and homoscedasticity. Violations of these assumptions can lead to biased estimates and incorrect inferences.
@@ -263,6 +262,65 @@ Assumption of Causality: Statistical models often establish associations between
 Model Uncertainty: Statistical models provide point estimates or predictions along with measures of uncertainty, such as confidence intervals or prediction intervals. However, these measures may not fully capture all sources of uncertainty, leading to overly optimistic or conservative estimates.
 
 Subjectivity and Bias: The choice of model, variables, and analysis techniques can be influenced by subjective judgments and biases. Researchers may inadvertently introduce bias into the modeling process, leading to erroneous conclusions.
+
+## Biases in mathematical modelling
+
+Biases in mathematical modeling can significantly affect the accuracy and fairness of the models' outcomes. These biases can stem from various sources, including the data used, the assumptions made by the modelers, and the interpretation of the results. Understanding and addressing these biases is crucial for developing models that provide reliable and equitable predictions or analyses. Here are some common forms of biases in mathematical modeling:
+
+**Data Bias:** This occurs when the dataset used to train or inform the model does not accurately represent the real-world scenario it aims to simulate or predict. Data can be biased due to underrepresentation of certain groups, overrepresentation of others, or simply because it contains errors or inaccuracies. For instance, if a model designed to predict creditworthiness is trained on data that lacks diversity, it may unfairly disadvantage certain groups of people.
+
+**Selection Bias:** Selection bias happens when the process used to collect data introduces an inherent bias. For example, if a health study only includes volunteers who are inherently healthier, more active, or more health-conscious than the general population, the results can't be accurately generalized to all demographics.
+
+**Confirmation Bias:** This is a type of cognitive bias that can affect the way modelers interpret data or results, leading them to favor outcomes that confirm their preexisting beliefs or hypotheses. This can inadvertently influence the model's development and its conclusions.
+
+**Algorithmic Bias:** Algorithmic bias occurs when the algorithms that underpin models systematically produce outcomes that are biased towards certain groups or individuals. This can be due to the way the algorithms are designed, the data they're trained on, or the objectives they're set to optimize.
+
+**Simplicity Bias:** In an effort to make models tractable and understandable, modelers might oversimplify complex systems. This can lead to models that fail to capture critical dynamics of the systems they aim to represent, potentially leading to inaccurate predictions or analyses.
+
+**Social and Ethical Bias:** These biases arise when models, intentionally or not, reinforce or perpetuate social inequalities or ethical issues. For example, models used in criminal justice or hiring processes might inadvertently encode societal biases against certain demographic groups.
+
+
+## Case Study: Predictive Policing
+
+### Problem Setup:
+
+Predictive policing models use historical crime data, such as types of crimes committed, locations, times, and sometimes demographic information about known offenders. The objective is to predict future crime hotspots or individuals who might be at a higher risk of committing crimes.
+
+### Biases Identified:
+
+**Data Bias:** Historical crime data is not a perfect representation of all crimes committed, only those that have been reported and recorded. If certain communities are over-policed, the data will show higher crime rates in those areas, not necessarily because more crime occurs there, but because more crime is detected and reported.
+
+**Algorithmic Bias:** The models may inadvertently learn to associate crime with specific neighborhoods or demographic groups, based on the biased historical data. This can lead to a feedback loop where police resources are increasingly allocated to these areas or groups, leading to more arrests and reinforcing the data bias.
+
+**Ethical and Social Bias:** The use of such models can exacerbate social inequalities. Communities that are already disadvantaged may face increased surveillance and policing, leading to higher rates of arrests and convictions. This perpetuates a cycle of disadvantage and can erode trust in law enforcement.
+
+### Consequences
+
+**Inequitable Policing:** Certain neighborhoods, often those with higher populations of minority groups, may experience disproportionate policing efforts, leading to an unfair distribution of law enforcement resources and negative impacts on community relations.
+**Self-Perpetuating Biases:** The feedback loop created by relying on biased data can make it difficult to break the cycle of over-policing in certain areas, as the model continues to predict high crime rates based on skewed arrest records.
+
+### Mitigation Strategies:
+
+**Diverse Data Sources:** Incorporating a wider range of data sources can help mitigate biases in the dataset. This might include community reports, socioeconomic data, and other indicators that provide a more balanced view of risk factors.
+**Algorithmic Fairness Techniques:** Applying techniques designed to detect and correct biases in algorithms can help ensure that predictions do not disproportionately impact certain groups.
+**Transparency and Oversight:** Making the models' workings transparent and subject to community oversight can help build trust and ensure that they are used ethically and fairly.
+**Continuous Evaluation:** Regularly evaluating the models against real-world outcomes and updating them based on current data and ethical considerations can help prevent biases from becoming entrenched.
+
+This case study underscores the importance of carefully considering the sources of data, the design of algorithms, and the broader social impact of mathematical models. It highlights the need for ongoing vigilance, ethical considerations, and community engagement in the development and application of predictive technologies.
+
+## Links
+
+https://daily.jstor.org/what-happens-when-police-use-ai-to-predict-and-prevent-crime/
+https://www.technologyreview.com/2020/07/17/1005396/predictive-policing-algorithms-racist-dismantled-machine-learning-bias-criminal-justice/
+
+## Exercise
+
+Last week, we asked you to think about a phenomena you would like to model. Now you have been given some formal steps and some ideas on how to model your phenomena, think now about how you may formalise this model? 
+
+Think about what specific measureable phenomena you would like to measure
+Think about what these key factors are and how factors interact with one another?
+Think about how you might collect data for your model?
+Think about any biases your model may have and design some mitigation strategies for these
 
 ## Conclusion:
 

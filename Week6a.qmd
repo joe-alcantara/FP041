@@ -117,6 +117,7 @@ If we compared our new tumour (yellow) to the closest neighbour (k = 1). We woul
 
 Lets think about the k-NN model intuitively. What we are basically saying is, if two objects share similar characteristics, they may be the same class of object. Now, of course that may also not be true for many reasons and we can be critical of this as a model later, but for now lets think about how this might work when there is more than one attribute to consider.
 
+
 ## Parameters of k-NN:
 
 Two main parameters in k-NN are:

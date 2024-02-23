@@ -15,3 +15,148 @@ Mathematical modeling is a critical tool for understanding, analyzing, and solvi
 - Think about a real-world problem from a modelling perspective
 - Framework of modelling
 - Have a broad understanding of mathematical models and the scope of its application
+
+## What is a model?
+There are three components of a model.
+
+- Represents a phenomena
+- Simple
+- Flexible
+
+**An example of a Physical Model**
+- Normally a prototype (constructed copy) of a real object
+- Examples: model building, bridges, airplane, solar system
+
+**An example of a Schematic Model**
+- Normally used to visualize a system structure
+- Examples: Organisation charts, Maps, Diagrams, Process charts
+
+**An example of a Mathematical Model**
+- A simple and flexible representation of a real object or phenomena using mathematical language
+- Examples: Algebraic equations, Differential equation, Algorithm
+  - For data science: descriptive and inferential statistics
+
+## Why Mathematics?
+
+1. Mathematics is a precise language
+- Forces us to formulate concrete ideas and assumptions in an unambiguous way.
+
+2. Mathematics is a concise language
+  - One equation says more than 1000 words
+
+3. Mathematics is a universal language
+  - Same mathematical techniques can be applied over a range of scales.
+
+4. Mathematics is the language that computers understand best.
+
+
+## Definition of Mathematical Modeling:
+
+Mathematical modeling is the process of using mathematical equations, algorithms, and simulations to represent, analyze, and make predictions about real-world phenomena. It involves creating simplified, abstract representations of complex systems to gain insights and solve practical problems.
+
+## Definition of Statistical Modeling
+
+Statistical modeling is a process used to describe and understand the relationships between variables in a dataset. It involves the use of statistical techniques to analyze data, make predictions, and draw conclusions about the underlying patterns and structures within the data.
+
+## Key Concepts in Mathematical Modeling:
+
+1. Abstraction:
+2. Variables:
+3. Equations
+4. Assumptions
+5. Parameters
+6. Validation and Verification
+7. Simulation and Analysis
+8. Sensitivity Analysis
+9. Model Selection
+10. Interpretation
+11. Communication
+
+
+## Key Concepts in Statistical Modelling
+
+1. Variables: 
+2. Data Distribution: 
+3. Probability Distributions: 
+4. Parameters: 
+5. Estimation: 
+6. Hypothesis Testing: 
+7. Regression Analysis: 
+8. Model Assumptions: 
+9. Model Selection and Validation: 
+10. Uncertainty and Confidence Intervals: 
+11. Communication
+
+## Four stages of mathematical and statistical modelling
+
+1. Build the Model
+2. Analyse the Model
+3. Validate the Model
+4. Apply the Model
+
+## What makes a good model?
+
+The key attributes of a good model.
+
+1. Fit for purpose
+  - Precisely and concisely solves the real-world problem for the end users
+  - Appropriate balance between accuracy, simplicity and flexibility
+2. For statistical predictive model: How easy is it to use your model for different types of data (replicability)
+
+## Drawbacks of Modelling
+
+Assumptions: 
+Overfitting: 
+Underfitting: 
+Complexity and Interpretability: 
+Data Requirements: 
+Data Quality:
+Computational Complexity:
+Assumption of Causality: 
+Model Uncertainty:
+Subjectivity and Bias:
+
+## Biases in mathematical modelling
+
+Biases in mathematical modeling can significantly affect the accuracy and fairness of the models' outcomes. These biases can stem from various sources, including the data used, the assumptions made by the modelers, and the interpretation of the results. Understanding and addressing these biases is crucial for developing models that provide reliable and equitable predictions or analyses. Here are some common forms of biases in mathematical modeling:
+
+## Data Bias 
+
+This occurs when the dataset used to train or inform the model does not accurately represent the real-world scenario it aims to simulate or predict. Data can be biased due to underrepresentation of certain groups, overrepresentation of others, or simply because it contains errors or inaccuracies. For instance, if a model designed to predict creditworthiness is trained on data that lacks diversity, it may unfairly disadvantage certain groups of people.
+
+## Selection Bias
+
+Selection bias happens when the process used to collect data introduces an inherent bias. For example, if a health study only includes volunteers who are inherently healthier, more active, or more health-conscious than the general population, the results can't be accurately generalized to all demographics.
+
+## Confirmation Bias 
+
+This is a type of cognitive bias that can affect the way modelers interpret data or results, leading them to favor outcomes that confirm their preexisting beliefs or hypotheses. This can inadvertently influence the model's development and its conclusions.
+
+## Algorithmic Bias
+
+Algorithmic bias occurs when the algorithms that underpin models systematically produce outcomes that are biased towards certain groups or individuals. This can be due to the way the algorithms are designed, the data they're trained on, or the objectives they're set to optimize.
+
+## Simplicity Bias 
+
+In an effort to make models tractable and understandable, modelers might oversimplify complex systems. This can lead to models that fail to capture critical dynamics of the systems they aim to represent, potentially leading to inaccurate predictions or analyses.
+
+## Social and Ethical Bias
+
+These biases arise when models, intentionally or not, reinforce or perpetuate social inequalities or ethical issues. For example, models used in criminal justice or hiring processes might inadvertently encode societal biases against certain demographic groups.
+
+## Case Study: Predictive Policing
+
+Predictive policing models use historical crime data, such as types of crimes committed, locations, times, and sometimes demographic information about known offenders. The objective is to predict future crime hotspots or individuals who might be at a higher risk of committing crimes.
+
+## Exercise
+
+Last week, we asked you to think about a phenomena you would like to model. Now you have been given some formal steps and some ideas on how to model your phenomena, think now about how you may formalise this model? 
+
+- Think about what specific measureable phenomena you would like to measure
+- Think about what these key factors are and how factors interact with one another?
+- Think about how you might collect data for your model?
+- Think about any biases your model may have and design some mitigation strategies for these
+
+## Conclusion:
+
+Both Mathematical modeling and Statistical modelling provide powerful and versatile approaches for tackling complex real-world problems. It involves abstraction, equations, assumptions, parameter estimation, validation, simulation, and interpretation. Whilst Mathematical models provide insights, support decision-making, and drive innovation in various fields. Statistical modelling also does this but relies on real world data to create and validate models. 

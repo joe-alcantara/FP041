@@ -26,41 +26,25 @@ There are several common evaluation metrics used for classification models:
 
 ## Errors that can occur and implications
 
-Type 1 Error (False Positive)
+### Type 1 Error (False Positive)
 
 A Type 1 error occurs when the hypothesis test incorrectly rejects a true null hypothesis. This is also known as a "false positive" result. In other words, the test indicates that there is an effect or a difference when, in fact, there isn't one. The probability of making a Type 1 error is denoted by the alpha level (α), which is set by the researcher before conducting the test. A common alpha level is 0.05, indicating a 5% risk of rejecting the null hypothesis when it is actually true.
 Example:
 
 In a drug trial, a Type 1 error would occur if we conclude that a new medication is effective in treating a condition when it actually has no effect. This would lead to falsely believing in the efficacy of the drug.
-Type 2 Error (False Negative)
+
+### Type 2 Error (False Negative)
 
 A Type 2 error occurs when the hypothesis test fails to reject a false null hypothesis. This is known as a "false negative" result. In this case, the test suggests that there is no effect or difference when, in reality, there is one. The probability of making a Type 2 error is denoted by the beta level (β), and its complement (1-β) is known as the power of the test, which reflects the test's ability to correctly reject a false null hypothesis.
+
 Example:
 
 In the context of the same drug trial, a Type 2 error would happen if we conclude that the new medication is not effective in treating a condition when it actually is. This would result in overlooking a potentially beneficial treatment.
-Balancing Type 1 and Type 2 Errors
+
+## Balancing Type 1 and Type 2 Errors
 
 In practice, there's often a trade-off between minimizing Type 1 and Type 2 errors. Decreasing the risk of one typically increases the risk of the other. The choice of alpha level affects this balance; a lower alpha level reduces the risk of a Type 1 error but may increase the risk of a Type 2 error, and vice versa. The optimal balance depends on the specific context and the consequences of each type of error. For instance, in medical testing, it might be preferable to accept a higher risk of Type 1 errors (falsely identifying a condition) to reduce the risk of Type 2 errors (missing a diagnosis), given the potential health implications.
 
-## Methods of Evaluation:
-
-Model evaluation involves various techniques to assess a classification model's performance:
-
-1. Cross-Validation:
-
-Cross-validation (e.g., k-fold cross-validation) splits the dataset into multiple subsets (folds) for training and testing. It helps estimate a model's performance on unseen data and reduces overfitting.
-
-2. Train-Test Split:
-
-A common approach is to split the dataset into a training set and a testing set. The model is trained on the training set and evaluated on the testing set.
-
-3. Stratified Sampling:
-
-When dealing with imbalanced datasets, stratified sampling ensures that the training and testing sets maintain the same class distribution.
-
-4. Leave-One-Out Cross-Validation (LOOCV):
-
-LOOCV is a special case of cross-validation where each data point is treated as a test sample once, and the model is trained on the remaining data. It is useful for small datasets but can be computationally expensive.
 
 ## Conclusion:
 

@@ -1,6 +1,8 @@
 ---
 title: "Week 6 - Introduction to Classification"
-format: pdf
+format: 
+    pdf:
+        resource-path: [./images]
 ---
 
 ## Introduction:
@@ -72,24 +74,48 @@ It classifies data points based on their proximity to other data points in the f
 
 For the purposes of this module, we will be focused on k-nearest neighbours.
 
-## k-Nearest Neighbors (k-NN):
+## k-Nearest Neighbours (k-NN):
 
-k-NN is a simple yet effective classification algorithm that works based on the premise that the closer two data points are together, the more likely they are of the same class. Lets consider a simple example with tumor size and whether they are benign or malignant.
+k-NN is a simple yet effective classification algorithm that works based on the premise that the closer two data points are together, the more likely they are of the same class. 
 
+Lets consider a simple example with tumor size (in mm) and whether they are benign or malignant. The blue dots are malignant tumors and the orange dots are benign tumors. 
 
+![check](classification1.png){width=80%}
 
-It classifies a data point by considering the class labels of its k-nearest neighbors in the feature space.
+Is there a rule we can apply here?
 
-The k-NN Algorithm:
+What happens then, we have a new tumor (indicated by the yellow dot) that hasn't been classified? what would you classify this as using this rule?
 
-1. Choose the value of k, the number of nearest neighbors to consider (an odd number is often chosen to avoid ties).
-2. Compute the distance between the input data point and all other data points in the dataset (common distance metrics include Euclidean, Manhattan, and Minkowski).
-3. Select the k-nearest neighbors based on the computed distances.
-4. Count the class labels of the k-nearest neighbors and assign the majority class label to the input data point.
+![check](classificationNewInstance.png){width=80%}
+
+What happens if they are a bit more mixed up? Is there a rule?
+
+![check](classification2.png){width=80%}
+
+Now, we add a new tumor for you to identify. What would you class this as? 
+
+![check](classification2NewInstance.png){width=80%}
+
+The answer is not clear cut. Luckily we can use k-Nearest Neighbours to figure this out.
+
+### The k-NN Algorithm:
+
+Here is the k-nearest neighbours process, or algorithm
+
+1. Choose the value of k, the number of nearest neighbours to consider (an odd number is often chosen to avoid ties).
+2. Compute the distance between the input data point and all other data points in the dataset.
+3. Select the k-nearest neighbours based on the computed distances.
+4. Count the class labels of the k-nearest neighbours and assign the majority class label to the input data point.
+
+## Back to our example
+
+If we compared our new tumour (yellow) to the closest neighbour (k = 1). We would classify this as benign as the closest dot to the yellow dot in figure 5 is orange. Lets say that we want to use three neighbours (k = 3), the three dots closest to the yellow dot are orange, blue and blue. Blue wins because there are more blue dots (2) than orange dots (1) to the yellow dot.
+
+![check](classification2NewInstance.png){width=80%}
 
 ## The intuition behind the k-nearest-neighbours model.
 
-Lets think about the k-NN model intuitively. What we are basically saying is, if two objects share similar characteristics, they may be the same class of object. Now, of course that may also not be true for many reasons and we can be critical of this as a model later, but for now lets think about 
+Lets think about the k-NN model intuitively. What we are basically saying is, if two objects share similar characteristics, they may be the same class of object. Now, of course that may also not be true for many reasons and we can be critical of this as a model later, but for now lets think about how this might work when there is more than one attribute to consider.
 
 ## Parameters of k-NN:
 

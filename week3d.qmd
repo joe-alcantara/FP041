@@ -1,0 +1,17 @@
+---
+title: "Week 3 - Concepts in Mathematical and Statistical Modelling"
+author: "Joe Alcantara"
+format: pptx
+---
+
+
+## Introduction:
+
+Mathematical modeling is a critical tool for understanding, analyzing, and solving complex real-world problems across various disciplines. In this module, we will delve into the core concepts of mathematical modeling and how it is applied in practice.
+
+## Learning objectives
+
+- Understand what models and mathematical models are.
+- Think about a real-world problem from a modelling perspective
+- Framework of modelling
+- Have a broad understanding of mathematical models and the scope of its application

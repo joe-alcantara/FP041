@@ -1,0 +1,160 @@
+---
+title: "Week 4 - Descriptive Statistics in Mathematical Modelling"
+format: pdf 
+---
+
+## Measures of Central Tendency
+
+1. Find the mean, mean, and mode of the following: 
+
+8, 5, 9, 6, 7, 9, 9, 8, 2
+
+2. 31 football players each took 5 penalties. The number of goals they scored is summarised in the table below:
+
+| Goals scored | No of player (Frequency) |
+|--------------|--------------------------|
+| 0 | 1 |
+| 1 | 2 |
+| 2 | 4 |
+| 3 | 9 |
+| 4 | 10 |
+| 5 | 5 |
+
+Find the mean median and mode of the number of goals scored
+
+3.  The heights, in metres, of thirty trees is shown in the table below:
+
+| Height (m) metres | No. of trees |
+|-------------------|--------------|
+| 5 < h < 15 | 7 |
+| 15 < h < 25 | 5 |
+| 25 < h < 35 | 13 |
+| 35 < h < 45 | 3 |
+| 45 < h < 55 | 2 |
+
+Estimate the mean, median and mode of the height.
+
+4. 35 people were given the following question;
+
+*’How often do you eat meat? 1) Never 2) Rarely 3) Sometimes 4) Often 5) Most days*
+
+Their responses are summarised in the table below:
+
+| Meat-eating tendency | Frequency |
+|----------------------|-----------|
+| Never | 6 |
+| Rarely | 3 |
+| Sometimes | 7 |
+| Often | 7 |
+| Most days | 12 |
+
+Find the average ‘meat-eating tendency’
+
+5. Some students have their reaction times tested in a physical challenge. The times (in seconds) are listed below:
+
+5.68, 5.84, 6.95, 6.83, 1.87, 6.98, 2.04, 5.92, 6.14, 6.76, 6.26
+
+Calculate the average reaction time
+
+6. A fashion store sells dresses in different sizes. The table below shows the number of varying sizes of a particular dress that are sold in a week.
+
+| Size | Frequency |
+|------|-----------|
+| 6 | 0 |
+| 8 | 2 |
+| 10 | 4 |
+| 12 | 4 |
+| 14 | 5 |
+| 16 | 2 |
+
+a. Find the mode, mean and median of the data.
+b. Which average is the store manager going to be most interested in, and why?
+
+7. The mean height of 4 girls is 158cm Sharon joins the group and the mean becomes 156cm How tall is Sharon? (Clue: Calculate the total height of all the girls)
+
+8. Here is a list of numbers written in order of size;
+
+*3 6 x y*
+
+The numbers have a median of 8 and a mean of 11 Find the value of x and the value of y.
+
+9. The table shows points scored in a quiz. The mean score is 12. Find the value of x.
+
+| Points scored | Frequency |
+|---------------|-----------|
+| 0 | 3 |
+| 5 | 2 |
+| 10 | x |
+| 15 | 8 |
+| 20 | 4 |
+
+(Hint- Find an expression for the mean in terms of x, and solve)
+
+## Measures of Variance
+
+1. The marks in a science test were as follows:
+
+*58, 64, 42, 75, 90, 56*
+
+Find the range.
+
+2. Seven people had the following IQ scores:
+
+*125, 130, 96, 111, 84, 126, 108*
+
+Find the interquartile range.
+
+3. The lengths in cm of some fish in a tank were as follows:
+
+*18, 18, 21, 23, 25*
+
+Find the variance.
+
+4. The heart rates of some people were as follows:
+
+*95, 155, 131, 160, 145, 98*
+
+Find the standard deviation
+
+5. Some students watched a horror movie and afterwards were asked to give a score for how scary they found it using the following: 
+
+* 1-Not at all scary, 2-A bit scary, 3-Quite scary, 4-Extremely scary.* 
+
+The responses are summarised in the following table:
+
+| How Scary? | No. of Students |
+|------------|-----------------|
+| 1 | 2 |
+| 2 | 9 |
+| 3 | 8 | 
+| 4 | 8 |
+
+Find a suitable measure of variability.
+
+6. Some patients at a health centre were asked to state how many days that they had taken painkillers in the previous week. The responses are summarised in the table below:
+
+| No. of times taken painkillers | No. of Students |
+|--------------------------------|-----------------|
+| 0 | 13 |
+| 1 | 6 |
+| 2 | 8 |
+| 3 | 5 |
+| 4 | 5 |
+| 5 | 1 |
+| 6 | 0 |
+| 7 | 1 |
+
+Calculate the standard deviation for the number of painkillers taken.
+
+7. The number of times that students were late for a particular class over the term are in the table below:
+
+| No. of times late | No. of Students |
+|-------------------|-----------------|
+| 0 | 5 |
+| 1-3 | 8 |
+| 4-6 | 5 |
+| 7-10 | 3 |
+| 11-15 | 1 |
+| 16+ | 0 |
+
+Calculate the standard deviation for the number of times that the students were late.

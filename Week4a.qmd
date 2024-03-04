@@ -238,12 +238,9 @@ Group A gave the following responses 4, 5, 3, 4, 5, 3, 4
 Group B gave the following responses 0, 3, 10, 1, 7, 3, 4
 
 The mean for group A was
-4 + 5 + 3 + 4 + 5 + 3 + 4
-7 = 4
+$\frac{4 + 5 + 3 + 4 + 5 + 3 + 4}{7} = 4$
 
-The mean for group B was
-0 + 3 + 10 + 1 + 7 + 3 + 4
-7 = 4
+The mean for group B was $\frac{0 + 3 + 10 + 1 + 7 + 3 + 4}{7} = 4$
 
 Both groups have the same average But the values for group B are more spread out. They vary more.
 
@@ -260,90 +257,95 @@ to look at 4.
 
 ## Range
 
-Range formula
-Range = Highestvalue − LowestValue
-For Gp A: 4, 5, 3, 4, 5, 3, 4
-Range = 5 − 3 = 2
-For Gp B: 0, 3, 10, 1, 7, 3, 4
-Range = 10 − 0 = 10
+::: {.callout-note}
+## Range formula 
+$Range = Highestvalue − LowestValue$
+:::
 
+Range formula
+
+For Gp A: 4, 5, 3, 4, 5, 3, 4
+
+$Range = 5 − 3 = 2$
+
+For Gp B: 0, 3, 10, 1, 7, 3, 4
+
+$Range = 10 − 0 = 10$
 
 ## Interquartile Range
 
 Put them in ascending order and calculate the value 3/4 of way – the value ¼ of the way
 
-IQR formula
-IQR = upperquartile − lowerquartile = Q3 − Q1
-Q1 is ( n+1
-4 )th value, Q3 is ( n+3
-4 )th value
+::: {.callout-note}
+## IQR formula 
+$IQR = upperquartile − lowerquartile = Q3 − Q1$
+
+Q1 is $\frac{n+1}{4}^{th}$ value, Q3 is $3(\frac{n+1}{4})^{th}$ value
+:::
 
 Example
 Gp A: 3, 3, 4, 4, 4, 5, 5
-Q1 Is ( 7+1
-4 )th = 2nd value = 3, Q3 is ( n+1
-4 )th = 6th value = 5
-Therefore IQR = Q3 - Q1= 5 - 3 = 2
+
+Q1 is $\frac{7+1}{4}^{th}$ value = 2nd value = 3
+
+Q3 is $3(\frac{7+1}{4})^{th}$ value = 6th value = 5
+
+Therefore $IQR = Q3 - Q1 = 5 - 3 = 2$
+
 Calculate this for Group B. Gp B: 0, 1, 3, 3, 4, 7, 10
 
 Example
 Gp B: 0, 1, 3, 3, 4, 7, 10
-Q1 Is ( n+1
-4 )th value = 1, Q3 is ( n+1
-4 )th value = 7
-IQR = Q3 - Q1= 7 - 1 = 6
 
+Q1 is $\frac{7+1}{4}^{th}$ value = 2nd value = 1
+
+Q3 is $3(\frac{7+1}{4})^{th}$ value = 6th value = 6
+
+Therefore $IQR = Q3 - Q1= 7 - 1 = 6$
 
 The IQR is usually preferable to the range because it is unaffected by outliers (extreme values)
-Gp A: 3, 3, 4, 4, 4, 5, 5 Range = 2, IQR = 2
-If the highest response had been 50 hrs Gp A: 3, 3, 4, 4, 4, 5, 50
-Range = 47, IQR = 2
-IQR is better because 50 might have been a typo or a lie. Even if
-the 50 was true, the IQR is more representative of the whole group
 
-Box and Whisker Plots
-Figure: Illustration of IQR
+If Gp A responses were: 3, 3, 4, 4, 4, 5, 5 then range = 2 and IQR = 2 however, If the highest response had been 50 hrs Gp A: 3, 3, 4, 4, 4, 5, 50 then Range = 47, IQR = 2. In this situation, IQR is better because 50 might have been a typo or a lie. Even if the 50 was true, the IQR is more representative of the whole group
 
-Variance formula
-Variance =
-∑ x 2 − n¯x 2
-n − 1
+::: {.callout-note}
+## Variance formula 
+$Variance = \frac{\sum{(x - \bar{x})^2}}{n-1}$
+:::
 
 Variance
 For 2 groups, calculate the variance.
 Gp A: 4, 5, 3, 4, 5, 3, 4
-∑ x 2 = 42 + 52 + 32 + 42 + 52 + 32 + 42 = 116
-¯x = 4
-var = 116−7(42)
-7−1 = 0.667
+
+- $\sum{x^2} = 4^2 + 5^2 + 3^2 + 4^2 + 5^2 + 3^2 + 4^2 = 116$
+- $\bar{x} = 4$
+- $var = \frac{116−7(4^2)}{7−1} = 0.667$
 
 Variance
 Gp B: 0, 3, 10, 1, 7, 3, 4
-∑ x 2 = 02 + 32 + 102 + 12 + 72 + 32 + 42 = 184
-¯x = 4
-var = 116−7(42)
-7−1 = 12
+- $\sum{x^2} = 0^2 + 3^2 + 10^2 + 1^2 + 7^2 + 3^2 + 4^2 = 184$
+- $\bar{x} = 4$
+- $var = \frac{184−7(4^2)}{7−1} = 12$
 
-Standard Deviation
-Standard Deviation formula
-StandardDeviation =
-√ ∑ x 2 − n¯x 2
-n − 1
+::: {.callout-note}
+## Standard Deviation formula 
+$sd = \sqrt{\frac{\sum{(x - \bar{x})^2}}{n-1}}$
+:::
 
-Standard Deviation example
-Using the calculations on the previous slide
+Using the variance calculations
 Gp A: 4, 5, 3, 4, 5, 3, 4
-√ 116−7(42)
-7−1 = 0.816
+
+$\sqrt{\frac{116−7(4^2)}{7−1}} = 0.816$
+
 Gp B: 0, 3, 10, 1, 7, 3, 4
-√ 184−7(42)
-n−1 = 3.46
+
+$\sqrt{\frac{184−7(4^2)}{7-1}} = 3.46$
 
 Interpretation of standard deviation - It roughly tells you how much the data vary from the mean on average
 
 Which measure of variability should we use?
 
 The standard deviation is usually best to use, and is convention. However if
+
 a. there are some outliers OR
 b.  it is an ordinal variable (one which has ordered categories)
 

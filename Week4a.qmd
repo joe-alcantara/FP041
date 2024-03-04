@@ -48,10 +48,9 @@ What conclusions can we reach about the US Gini Index score now we have this inf
 
 We can also compare countries at different points of time
 
-Example: The Gini index for the United States was .41 in 1997 and grew to .45 in 2007
-and is now 39.8 as of 2021
+Example: The Gini index for the United States was .41 in 1997 and grew to .45 in 2007 and is now 39.8 as of 2021
 
-We can also use visualisations to illustrate
+We can also use visualisations to illustrate this (more on this next week)
 
 Basic statistics you probably know
 
@@ -117,19 +116,15 @@ Example data
 | 8 | 3 | 24 |
 | 9 | 6 | 54 |
 | 10 | 8 | 80 |
+| Total | n = 19 | $\sum{fx} = 167$
 
-Total n = 19 ∑ 𝑓𝑥 = 167
-Mean,̄ 𝑥 = ∑ 𝑓𝑥
-𝑛 = 167
-19 = 8.8
-
+$$ mean = \frac{\sum{fx}}{n} = \frac{167}{19} = 8.8 $$
 
 ## Find the median of grouped data
 
 If the data are grouped, the median can be found as follows:
 
-1. Work out the cumulative frequency (cf) for each value (ie. Add up the frequencies as
-you go along to obtain a running total)
+1. Work out the cumulative frequency (cf) for each value (ie. Add up the frequencies as you go along to obtain a running total)
 2. Add 1 to the total frequency and then halve your answer. This tells you the position of
 the middle value
 3. Find the lowest cf that is at least as large as the position found in Step 2
@@ -160,32 +155,38 @@ Following the steps this is (19+1) / 2 = 10th position, therefore the Median is 
 Example where a response is a range of numbers
 
 30 students were asked. ‘How many times did you post something on Social Media over the weekend?’
-a) 0
-b) 1-5
-c) 6-10
-d) 11-15
-e) 16+
+
+1. 0
+2. 1-5
+3. 6-10
+4. 11-15
+5. 16+
+
 Responses
-No. of posts No. of students
-0 4
-1-5 8
-6-10 13
-11-15 3
-16+ 2
-• How do we calculate averages here?
-5
-Results
-• “1-5” is not a number, nor is “6-10” etc
-• We could use the mid value for each and then find the averages
-No. of posts No. of students Mid-value
-0 4 0
-1-5 8 3
-6-10 13 8
-11-15 3 13
-16+ 2 18
-• Mean = 6.77
-• Median = 8
-• Mode = 6-10
+
+| No. of posts | No. of students |
+|--------------|-----------------|
+| 0 | 4 |
+| 1-5 | 8 |
+| 6-10 | 13 |
+| 11-15 | 3 |
+| 16+ | 2 |
+
+How do we calculate averages here?
+
+“1-5” is not a number, nor is “6-10” etc however, we could use the mid value for each and then find the averages.
+
+| No. of posts | No. of students | Mid-value |
+|--------------|-----------------|-----------|
+| 0 | 4 | 0 |
+| 1-5 | 8 | 3 |
+| 6-10 | 13 | 8 |
+| 11-15 | 3 | 13 |
+| 16+ | 2 | 18 |
+
+- Mean = 6.77
+- Median = 8
+- Mode = 6-10
 
 When do we use which average? (Nominal Variables)
 

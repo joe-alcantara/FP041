@@ -351,6 +351,50 @@ b.  it is an ordinal variable (one which has ordered categories)
 
 then you should use the IQR
 
+## Working with Grouped Data
+If the data are grouped in a frequency table then the IQR can be obtained using the cumulative frequency
+
+| No. oftimesattended,t | 3 | 6 | 8 | 9 | 10 |
+| No. of students (frequency, f) | 1 | 1 | 3 | 6 | 8 | 
+| Cumulative frequency | 1 | 2 | 5 | 11 | 19 |
+
+Calculate the IQR.
+
+- Q1 is (19 + 1)/4 = 5th which results in the value 8 
+
+- Q3 is 3(19 + 1)/4 = 15th which results in the value 19 
+
+- IQR = 10-8 = 2
+
+::: {.callout-note}
+## Standard Deviation formula 
+$sd = \sqrt{\frac{\sum{f(x - \bar{x})^2}}{n-1}}$
+:::
+
+| x | f | fx | fx2 |
+|---|---|----|-----|
+| 0 | 17 | 0 | 0 |
+| 1 | 12 | 12 | 12 |
+| 2 | 23 | 46 | 92 |
+| 3 | 37 | 111 | 333 |
+| 4 | 18 | 72 | 288 |
+| Totals | 107 | 241 | 725 |
+       
+- $\bar{x} = \frac{241}{107} = 2.252$
+- $sd = \sqrt{\frac{725−(107)2.252^2}{107−1}} = 1.31$
+
+If a group is a range of numbers, use the mid-values for each group, then find the standard deviation using the same method as before.
+
+| No. of posts | No. of students, f | Mid-value, x |
+|--------------|--------------------|--------------|
+| 0 | 4 | 0 |
+| 1-5 | 8 | 3 |
+| 6-10 | 13 | 8 |
+| 11-15 | 3 | 13 | 
+| 16 | 2 | 18 |
+
+Note that your calculated s.d. will only be an approximation, as you are assuming all responses in the 1-5 group have the value 3.
+
 ## Applications in Mathematical Modeling:
 
 Measures of central tendency and variability are vital in mathematical modeling for various reasons:

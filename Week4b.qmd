@@ -3,6 +3,120 @@ title: "Week 4 - Descriptive Statistics in Mathematical Modelling"
 format: pdf 
 ---
 
+## Introduction
+
+In this lab, what we will be covering is the filtering of datasets and how to generate some basic statistics. We will also be covering how to load datasets from different places. Finally, we will be looking at how to generate a markdown document which combines all of these steps.
+
+## Loading
+
+Data can come in a variety of forms, but for the purposes of this module we will be looking at three different ways. We will be looking at in built datasets, datasets from different libraries and datasets from csv files.
+
+### Loading datasets from inbuilt libraries:
+
+R comes with several built-in datasets that you can use for practice or testing. To load datasets from inbuilt libraries, you can use functions like data() or datasets::data(). Here's how to do it:
+
+```{r}
+# Load a dataset using the data() function
+data(mtcars)
+
+# Load a dataset using the datasets package
+library(datasets)
+data(iris)
+```
+
+### Loading datasets from other libraries:
+
+Many R packages come with datasets that are specific to the package's domain. To load datasets from other libraries, you first need to install and load the package, then you can access the datasets using functions provided by the package. Here's an example:
+
+```{r}
+# Install and load the package
+install.packages("ggplot2")
+library(ggplot2)
+
+# Load a dataset from the ggplot2 package
+data(diamonds)
+```
+
+### Loading datasets from CSV files:
+
+You can also load datasets from CSV (comma-separated values) files stored on your local machine or from a URL. To do this, you can use the read.csv() function or its variants like read.csv2() for reading CSV files with different delimiters. Here's how to do it:
+
+```{r}
+# Load a CSV file from local directory
+my_data <- read.csv("path/to/your/file.csv")
+
+# Load a CSV file from a URL
+my_data <- read.csv("https://example.com/data.csv")
+```
+
+If your CSV file has a different delimiter than a comma, you can specify it using the sep argument in the read.csv() function. For example, if your CSV file uses semicolons as delimiters:
+
+```{r}
+my_data <- read.csv("path/to/your/file.csv", sep = ";")
+```
+
+These are the basic steps to load datasets from various sources in R. Depending on the format and location of your data, you may need to adjust the loading process accordingly.
+
+## Filtering data
+
+### Using Base R:
+
+You can filter data using base R functions like subset() and indexing. Here's how:
+
+```{r}
+# Create a sample data frame
+data <- data.frame(
+  Name = c("Alice", "Bob", "Charlie", "David", "Emma"),
+  Age = c(25, 30, 35, 40, 45),
+  Gender = c("Female", "Male", "Male", "Male", "Female")
+)
+
+# Using subset() function
+subset_data <- subset(data, Age > 30)
+print(subset_data)
+
+# Using indexing
+indexed_data <- data[data$Age > 30, ]
+print(indexed_data)
+```
+
+### Using dplyr package:
+
+The dplyr package provides a concise syntax for data manipulation. You can use the filter() function from dplyr to filter data based on conditions. Here's how:
+
+```{r}
+# Install and load the dplyr package
+install.packages("dplyr")
+library(dplyr)
+
+# Filter data using dplyr
+filtered_data <- filter(data, Age > 30)
+print(filtered_data)
+```
+
+### Using subset() with logical conditions:
+
+You can also use logical conditions directly within the subset() function to filter data. Here's an example:
+
+```{r}
+# Filter data using subset() with logical conditions
+subset_data <- subset(data, Age > 30 & Gender == "Male")
+print(subset_data)
+```
+
+### Using which() function:
+
+The which() function in R returns the indices of the elements in a logical vector that are TRUE. You can use it to filter data based on conditions. Here's an example:
+
+```{r}
+# Filter data using which() function
+index <- which(data$Age > 30)
+filtered_data <- data[index, ]
+print(filtered_data)
+```
+
+These are some of the common methods to filter data in R. Depending on your preference and the complexity of your filtering conditions, you can choose the method that best suits your needs.
+
 ## Basic Statistics
 
 When it comes to calculating descriptive statistics, R can basically do it all. Let’s start with functions that are included in the base installation. We will then look for extensions that are available through the use of user-contributed packages. For illustrative purposes, we will again use several of the variables from the Motor Trend Car Road Tests (mtcars) dataset provided in the base installation. We will focus on miles per gallon (mpg), horsepower (hp), and weight (wt):
@@ -11,6 +125,89 @@ When it comes to calculating descriptive statistics, R can basically do it all. 
 myvars <- c("mpg", "hp", "wt")
 head(mtcars[myvars])
 ```
+
+Descriptive statistics in R provide summaries of the main characteristics of a dataset. These summaries include measures of central tendency, dispersion, and shape of the distribution. Here's a step-by-step guide on how to use descriptive statistics in R:
+
+Before you can perform descriptive statistics, you need to load your data into R. As we saw above, you can load data from various sources such as CSV files, Excel files, databases, or built-in datasets. For this example we will be using the iris dataset. We can load this by completing the following command.
+
+```{r}
+# Load a dataset using the datasets package
+library(datasets)
+df = data(iris)
+```
+
+This loads the data, and assigns this to the variable df.
+
+
+## Summary statistics:
+
+Use the summary() function to get a summary of your data, including minimum, 1st quartile, median, mean, 3rd quartile, and maximum for numeric variables. For factors, it shows the count of each level.
+
+```{r}
+# Get summary statistics
+summary(df)
+```
+
+## Measures of central tendency:
+
+Use functions like mean(), median(), and mode() (from the DescTools package) to calculate measures of central tendency such as mean, median, and mode.
+
+```
+# Calculate mean
+mean(my_data$column_name)
+
+# Calculate median
+median(my_data$column_name)
+
+# Calculate mode (requires the DescTools package)
+library(DescTools)
+Mode(my_data$column_name)
+```
+
+## Measures of dispersion:
+
+Use functions like sd() for standard deviation, var() for variance, range() for range, IQR() for interquartile range, and quantile() for quantiles.
+
+```
+# Calculate standard deviation
+sd(my_data$column_name)
+
+# Calculate variance
+var(my_data$column_name)
+
+# Calculate range
+range(my_data$column_name)
+
+# Calculate interquartile range
+IQR(my_data$column_name)
+
+# Calculate quantiles
+quantile(my_data$column_name)
+```
+
+### Frequency distributions:
+
+Use the table() function to create frequency distributions for categorical variables.
+
+```
+# Frequency distribution for a factor variable
+table(my_data$factor_column)
+```
+
+## Visualizing data:
+
+Visualize your data using histograms, box plots, or other plots to get a better understanding of the distribution and spread of your data.
+
+```
+# Histogram
+hist(my_data$numeric_column)
+
+# Box plot
+boxplot(my_data$numeric_column)
+```
+
+These are some basic steps to perform descriptive statistics in R. Depending on your specific requirements and the complexity of your data, you may need to explore additional functions and techniques.
+
 
 Let’s first look at descriptive statistics for all 32 models. We will then examine descriptive statistics by transmission type (am) and number of cylinders (cyl). Transmission type is a dichotomous variable coded 0=automatic, 1=manual, while the number of cylinders can be 4, 5, or 6. In the base installation, you can use the summary() function to obtain descriptive statistics. An example is presented in the following listing.
 

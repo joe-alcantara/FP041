@@ -81,7 +81,37 @@ $$ s_{yy} = \sum(y - \bar{y})^2 = \sum y^2 - \frac{(\sum y)^2}{n} $$
 
 (Note that even if there is no linear relationship, there still may be a relationship which is non-linear)
 
-# Plots with strong positive, strong negative, no correlation, perfect negative correlation
+## Some examples of correlations
+
+```{r}
+#| echo: false
+# Data generation
+set.seed(2)
+x <- 1:10
+y <- x + rnorm(10, mean = 0, sd = 2)
+y2 <- rnorm(10, mean = 0, sd = 2)
+y3 <- rev(x - rnorm(10, mean = 0, sd = 5))
+y4 <- rev(x - rnorm(10, mean = 0, sd = 2))
+
+# Creating the plot
+plot(x, y, pch = 19, col = "black", main = "Strong positive correlation (0.88)")
+abline(lm(y ~ x), col = "red", lwd = 3)
+
+# Creating the plot
+plot(x, y2, pch = 19, col = "black", main = "No correlation (0.064)")
+abline(lm(y2 ~ x), col = "red", lwd = 3)
+
+# Creating the plot
+plot(x, y3, pch = 19, col = "black", main = "Strong negative correlation (-0.57)")
+abline(lm(y3 ~ x), col = "red", lwd = 3)
+
+# Creating the plot
+plot(x, y4, pch = 19, col = "black", main = "Very strong negative correlation (-0.95)")
+abline(lm(y4 ~ x), col = "red", lwd = 3)
+
+```
+
+
 
 Consider the following example. The number of vehicles, 𝑥 millions, and the number of accidents, 𝑦 thousands, in 15 different countries were:
 

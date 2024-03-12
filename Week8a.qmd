@@ -70,12 +70,16 @@ $$ r = \frac{S_{xy}}{\sqrt{S_{xx}S_{yy}}} $$
 where:
 
 $$ S_{xy} = \sum(x - \bar{x})(y - \bar{y}) = \sum xy - \frac{\sum x \sum y}{n})  $$ 
-
+  
 $$ s_{xx} = \sum(x - \bar{x})^2 = \sum x^2 - \frac{(\sum x)^2}{n} $$
+  
 $$ s_{yy} = \sum(y - \bar{y})^2 = \sum y^2 - \frac{(\sum y)^2}{n} $$
+
+The attributes of the Pearson Correlation Coefficient (r) are:
+
 - Its value is between -1 and 1
 - A value close to 1 or -1 represents a strong linear relationship.
--A positive value suggests a positive relationship ie. as one variable increases the other increases
+- A positive value suggests a positive relationship ie. as one variable increases the other increases
 - A negative value suggests a negative relationship ie. as one variable increases the other decreases
 - A value close to 0 means a very weak or no linear relationship.
 
@@ -159,30 +163,13 @@ $$ s_{yy} = \sum y^2 - \frac{(\sum y)^2}{n} = 8753 - \frac{(229)^2}{6} = 12.833 
 $$ r = \frac{S_{xy}}{\sqrt{S_{xx}S_{yy}}} = \frac{3.05}{\sqrt{18.855*12.833}} = 0.196$$
 This is a low correlation which suggests very little evidence of a linear relationship between head circumference and gestation period
 
-
-
-## Some problems
+## Some problems with interpreting correlations
 
 A very strong correlation does not necessarily mean that a change in x causes a change in y
-
 
 A very weak correlation does not necessarily mean that x and y are unrelated. The relationship could be non-linear.
 
 High correlations can arise purely by chance, particularly if the sample size is small. The correlation may not be significantly different from zero.
-
-
-
-
-
-## Understanding Linear Regression:
-
-Linear regression aims to establish a linear relationship between independent variables (predictors) and a dependent variable (response).
-It assumes that this relationship can be expressed as a linear equation: Y = β₀ + β₁X₁ + β₂X₂ + ... + βₖXₖ + ε, where:
-Y is the dependent variable.
-X₁, X₂, ..., Xₖ are the independent variables.
-β₀, β₁, β₂, ..., βₖ are the coefficients.
-ε represents the error term, accounting for unexplained variability.
-
 
 ## Simple Linear Regression:
 
@@ -197,7 +184,7 @@ $$ a = \bar{y} - b\bar{x}$$
 and 
 
 $$ b = \frac{S_{xy}}{S_{xx}} $$
-Wait, we've seen the terms $ S_{xy}$ and $S_{xx}$ before when working out correlation!
+Wait, we've seen the terms $S_{xy}$ and $S_{xx}$ before when working out correlation!
 
 Example: The results from an experiment in which different masses were placed on a spring and the resulting length of the spring measured, are shown below
 
@@ -236,8 +223,6 @@ In terms of predicting new values for the above example. The range of observed v
 Extrapolation is generally unreliable since we have no way of knowing whether model assumptions remain valid outside the range of our observations
 
 Hence the earlier prediction ‘If the mass is 120 kg, then the length of the spring will be 71.6 cm on average’ should be treated with caution
-
-
 
 ## Applications of Linear Regression:
 

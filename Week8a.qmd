@@ -165,11 +165,32 @@ This is a low correlation which suggests very little evidence of a linear relati
 
 ## Some problems with interpreting correlations
 
-A very strong correlation does not necessarily mean that a change in x causes a change in y
+### A very strong correlation does not necessarily mean that a change in x causes a change in y
 
-A very weak correlation does not necessarily mean that x and y are unrelated. The relationship could be non-linear.
+**Pirate Population and Global Warming:** An amusing example often cited is the inverse relationship between the number of pirates and global temperatures. As the number of pirates has decreased over the centuries, global temperatures have risen. Of course, the decline in piracy doesn't cause global warming; this highlights how unrelated variables can appear correlated if we ignore other factors.
 
-High correlations can arise purely by chance, particularly if the sample size is small. The correlation may not be significantly different from zero.
+**Storks and Birth Rates:** In some European countries, statistical analyses have shown a positive correlation between stork populations and human birth rates. This doesn't mean storks deliver babies, but rather that both are influenced by third factors, such as rural settings, which might support larger stork populations and also have higher human birth rates due to different socio-economic factors.
+
+**Internet Explorer Use and Murder Rates:** This is a facetious example showing that the declining use of Internet Explorer correlates with a decrease in murder rates. The implication that discontinuing Internet Explorer use reduces murder rates is absurd, illustrating how correlation alone is not sufficient for establishing a causal relationship.
+
+### A very weak correlation does not necessarily mean that x and y are unrelated. The relationship could be non-linear. 
+
+Consider the following plot
+
+```{r}
+#| echo: false
+x = seq(-100, 100)    # just a sequence of numbers
+y = x^2 + rnorm(length(x), 0, 1000)      # generate non-linear association + noise
+plot(x, y, pch = 19, col = "black", main = "No correlation (0.064)")
+abline(lm(y ~ x), col = "red", lwd = 3)
+```
+
+Given the line of best fit, and the correlation of 0.0038. We would assume that there is no relationship between x and y. However, looking at the graph we can see non-linear relationship.
+
+### High correlations can arise purely by chance, particularly if the sample size is small. The correlation may not be significantly different from zero.
+
+
+**Diet and Health Outcomes in Small Communities:** Suppose a study looks at the health outcomes of people following a specific diet in a very small community. If this community happens to have unusually high or low rates of a certain health condition, it might falsely appear that the diet is responsible for these health outcomes. However, with such a small sample size, the findings might not be generalizable to larger populations.
 
 ## Simple Linear Regression:
 

@@ -5,8 +5,7 @@ format: pdf
 
 ## Introduction:
 
-Welcome to this lecture on the various methods used to evaluate classification models.
-Evaluating the performance of a classification model is crucial for assessing its accuracy and effectiveness. In this lecture, we will explore several key evaluation metrics and techniques used in the field of machine learning.
+Welcome to this lecture on the various methods used to evaluate classification models. Evaluating the performance of a classification model is crucial for assessing its accuracy and effectiveness. In this lecture, we will explore several key evaluation metrics and techniques used in the field of machine learning.
 
 ## Importance of Model Evaluation:
 
@@ -29,6 +28,7 @@ There are several common evaluation metrics used for classification models:
 ### Type 1 Error (False Positive)
 
 A Type 1 error occurs when the hypothesis test incorrectly rejects a true null hypothesis. This is also known as a "false positive" result. In other words, the test indicates that there is an effect or a difference when, in fact, there isn't one. The probability of making a Type 1 error is denoted by the alpha level (α), which is set by the researcher before conducting the test. A common alpha level is 0.05, indicating a 5% risk of rejecting the null hypothesis when it is actually true.
+
 Example:
 
 In a drug trial, a Type 1 error would occur if we conclude that a new medication is effective in treating a condition when it actually has no effect. This would lead to falsely believing in the efficacy of the drug.
@@ -45,6 +45,49 @@ In the context of the same drug trial, a Type 2 error would happen if we conclud
 
 In practice, there's often a trade-off between minimizing Type 1 and Type 2 errors. Decreasing the risk of one typically increases the risk of the other. The choice of alpha level affects this balance; a lower alpha level reduces the risk of a Type 1 error but may increase the risk of a Type 2 error, and vice versa. The optimal balance depends on the specific context and the consequences of each type of error. For instance, in medical testing, it might be preferable to accept a higher risk of Type 1 errors (falsely identifying a condition) to reduce the risk of Type 2 errors (missing a diagnosis), given the potential health implications.
 
+## Worked Example
+
+Suppose you have a binary classification problem with the following actual classes and predicted classes for a sample of 20 observations:
+
+Actual Classes: 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1
+
+Predicted Classes: 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1
+
+### Step 1: Create the Confusion Matrix:
+
+|  | Predicted Negative (0) |	Predicted Positive (1) |
+|---|---|---|
+| Actual Negative (0) |	TN | FP |
+| Actual Positive (1) |	FN | TP |
+
+Using the provided actual and predicted classes, we can construct the confusion matrix:
+
+|  |	Predicted Negative (0) | Predicted Positive (1) |
+|---|---|---|
+| Actual Negative (0) |	8 |	1 |
+| Actual Positive (1) |	0 |	11 |
+
+### Step 2: Calculate Evaluation Metrics:
+
+$Accuracy = (TP + TN) / Total = (8 + 11) / 20 = 19 / 20 = 0.95$
+
+$Precision = TP / (TP + FP) = 11 / (11 + 1) = 11 / 12 ≈ 0.92$
+
+$Recall (Sensitivity) = TP / (TP + FN) = 11 / (11 + 0) = 11 / 11 = 1$
+
+$Specificity = TN / (TN + FP) = 8 / (8 + 1) = 8 / 9 ≈ 0.89$ 
+
+$F1 Score = 2 * (Precision * Recall) / (Precision + Recall) = 2 * (0.92 * 1) / (0.92 + 1) ≈ 0.96$
+
+### Step 3: Interpretation:
+
+- The accuracy of the model is 95%, indicating that 95% of the predictions are correct.
+- The precision of the model is approximately 92%, implying that 92% of the samples predicted as positive are truly positive.
+- The recall (sensitivity) of the model is 100%, meaning that 100% of the actual positive samples are correctly identified.
+- The specificity of the model is approximately 89%, indicating that 89% of the actual negative samples are correctly identified.
+- The F1 score, which combines precision and recall, is approximately 96%, suggesting overall good performance of the model.
+
+This exercise provides a simplified scenario to create and evaluate a confusion matrix with a smaller dataset. It demonstrates the calculation of evaluation metrics to assess the performance of a classification model.
 
 ## Conclusion:
 

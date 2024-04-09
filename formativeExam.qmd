@@ -1,0 +1,137 @@
+---
+title: "Formative Exam"
+format: pdf
+editor: visual
+---
+
+## Exam Rubric
+
+Time Allowed: 2 Hours
+Exam Type: Standard Examination
+Approved Calculators: Permitted
+
+### Additional Stationery
+
+None:
+
+### Instructions
+
+There are FIVE questions.
+
+Answer FOUR out of these five questions. If you answer all five questions, the FIRST FOUR questions you answer will be marked.
+
+The total number of marks available is 100.
+
+Marks allocated to each question is given in brackets.
+
+Full marks for each question will ONLY be awarded if appropriate working is shown.
+
+Read the instructions on the answer book carefullly and make sure that you fill in the details required on the cover of each answer book.
+
+## Question 1: Theoretical Basis for Mathematical Modelling (25 Marks)
+
+Mathematical modelling has been used as the basis for modelling economies. However, there are multiple examples where these models have proven to be incorrect, sometimes with catastrophic results. With this in mind, answer the following questions:
+
+1. Describe three factors you consider essential to building a strong and reliable mathematical model for this purpose.
+
+2. Explain the importance of assumptions in building a mathematical model, use two detailed examples using the above as context.
+
+3. Describe three potential limitations of using a mathematical model in the above example.
+
+
+
+## Question 2: Descriptive Statistics (25 Marks)
+
+1. The number of hours sleep for two sets of students in different cohorts are being analysed. Observe the table below (sample data) and analyse it using descriptive statistics. Round to 2.d.p where appropriate.
+
+| Student ID  | Number of Hours  |
+|---|---|
+| 1  | 4.5 |
+| 2  | 3.8 |
+| 3  | 5.6 |
+| 4  | 6.8 |
+| 5  | 4.4 |
+| 6  | 3.7 |
+
+
+| Student ID | Number of Hours |
+|---|---|
+| 7  | 6.1 |
+| 8  | 4.9 |
+| 9  | 5.5 |
+| 10  | 7.2 |
+| 11  | 5.8 |
+| 12  | 4.9 |
+
+a. Measures of central tendency (Mean, Median and Mode)
+b. Measures of spread (Range, Variance and Standard Deviation)
+c. Describe any conclusions you can reach with these statistics.
+
+## Question 3: Regression (25 Marks)
+
+A mathematics teacher recorded the length of time, y minutes, taken to travel to school when leaving home x minutes after 7am on seven selected mornings. The results are as follows.
+
+| x | 0 | 10 | 20 | 30 | 40 | 50 | 60 |
+|---|---|----|----|----|----|----|----|
+| y | 16 | 27 | 28 | 39 | 39 | 48 | 51 |
+
+a. Plot the data on a scatter diagram
+b. Calculate the equation of the least squares regression line of y on x, writing your answer in the form $y = a + bx$
+c. Draw the regression line on your scatter diagram
+
+## Question 4: Classification (25 Marks)
+
+A researcher is looking at wether K-nearest neighbours can be used to classify tumors as benign or malignant based on the mass of the tumor.
+
+| Tumor ID | Mass of Tumor | Predicted Classification | Actual Classification |  
+|---|---|
+| 1  | 6.1 |
+| 2  | 4.9 |
+| 3  | 5.5 |
+| 4  | 7.2 |
+| 5  | 5.8 |
+| 6  | 4.9 |
+| 7  | 6.1 |
+| 8  | 4.9 |
+| 9  | 5.5 |
+| 10  | 7.2 |
+| 11  | 5.8 |
+| 12  | 4.9 |
+| 13  | 6.1 |
+| 14  | 4.9 |
+| 15  | 5.5 |
+| 16  | 7.2 |
+| 17  | 5.8 |
+| 18  | 4.9 |
+
+a. Calculate the Accuracy 
+b. Calculate the Precision
+c. Draw the confusion matrix for the above example
+d. An alternate model has also been developed and contains the following confusion matrix.
+
+|    | 0 | 1 |
+|----|---|---|
+| 0  |   |   |
+| 1  |   |   |  
+
+Evaluate which of the two models is best. Justify your answer.
+
+## Question 5: Techniques of Mathematical Modelling (25 Marks)
+
+The PPDAC framework is useful for mathematical modelling and is partially summarised below. Design an experiment where you with to count the nationalities of school age children who are currently attending school in the UK, separated by county and in total. You will need to complete the following steps. You need to assume you do not have any access to data.
+
+- Problem (10 marks)
+  - Define the problem
+  - Discuss 'How do we go about answering this question?'
+  
+- Plan (10 marks)
+  - Decide what to measure and how?
+  - How to record the data
+  - How to collect the data
+  
+- Data (3 marks)
+  - Will you need to change the data in any way?
+
+- Analysis (2 marks)
+  - How will you present your analysis?
+  - What sort of tables or graphs will you use?

@@ -40,7 +40,8 @@ where ŷ is the predicted value.
 4. R-squared (R²):
 
 R² represents the proportion of variance in the dependent variable explained by the model. It ranges from 0 to 1, where a higher value indicates a better fit.
-R² = 1 - (SSE / SST),
+
+$$R^2 = 1 - (SSE / SST)$$
 
 where SSE is the sum of squared errors and SST is the total sum of squares.
 
@@ -48,42 +49,66 @@ where SSE is the sum of squared errors and SST is the total sum of squares.
 
 Adjusted R² adjusts R² for the number of predictors in the model. It penalizes the addition of unnecessary variables.
 
-Adjusted R² = 1 - [(1 - R²) * ((n - 1) / (n - p - 1))], 
+$$Adjusted R^2 = 1 - [(1 - R²) * ((n - 1) / (n - p - 1))]$$
 
 where n is the number of data points and p is the number of predictors.
 
-## Model Validation Techniques:
+## Model Validation Techniques in R:
 
 ### Summary Statistics:
+
+In this example, we will do an exploration of a dataset which includes American women's height and weight. The question we are asking, is can we predict a woman's height given her weight?
+
+```{r}
+ # You may need to install the datasets library (by using install.packages('datasets'))
+library(datasets)
+```
+
+In this example, it's worth plotting the data to get a sense of whether there may be a trend or not. 
+
+```{r}
+plot(women, xlab = "Height (in)", ylab = "Weight (lb)",
+     main = "women data: American women aged 30-39")
+```
+
+
 The summary() function provides a summary of the regression model, including coefficients, standard errors, t-values, and p-values for each predictor.
+
 Example: 
 ```
 summary(lm_model)
 ```
 
-### Residual Analysis:
-Residuals are the differences between the observed values and the values predicted by the model. Plotting residuals against predicted values or predictors can help identify patterns or deviations from assumptions.
-        
-Example: 
-```
-plot(lm_model)
-```
-    
-### Diagnostic Plots:
-The plot() function can generate diagnostic plots, including scatterplots of residuals against fitted values, histograms of residuals, QQ plots, and more.
+Below we have created a linear regression model, where we use height as the dependent variable and weight as the independent variable.
 
-Example: 
+```{r}
+lmHeight = lm(height~weight, data = women) #Create the linear regression
+summary(lmHeight) #Review the results
 ```
-plot(lm_model)
-```
+
+The most important results are, our Multiple R-Squared and Adjusted R 
 
 ### Coefficient of Determination (R-squared):
 R-squared measures the proportion of the variance in the dependent variable that is explained by the independent variables in the model. Higher values indicate better fit.
+
+If we just want to isolate this statistic, we can call the following function.
 
 Example: 
 ```
 summary(lm_model)$r.squared
 ```
+
+### Adjusted R-squared:
+Adjusted R-squared penalizes the inclusion of unnecessary predictors in the model and provides a more conservative measure of model fit, especially for models with multiple predictors.
+
+If we just want to isolate this statistic, we can call the following function.
+
+Example: 
+```
+summary(lm_model)$adj.r.squared
+```
+
+However, these statistics are included in the summary report given above.
 
 ### Root Mean Squared Error (RMSE) or Mean Absolute Error (MAE):
 These metrics quantify the average difference between observed and predicted values. Lower values indicate better predictive accuracy.
@@ -93,42 +118,117 @@ Example
 RMSE: sqrt(mean(residuals(lm_model)^2))
 ```
 
-### Adjusted R-squared:
-Adjusted R-squared penalizes the inclusion of unnecessary predictors in the model and provides a more conservative measure of model fit, especially for models with multiple predictors.
-
-Example: 
-```
-summary(lm_model)$adj.r.squared
-```
-
-
-## Example
-
-In this example, we will do an exploration of
 ```{r}
- # You may need to install the datasets library (by using install.packages('datasets'))
-library(datasets)
+rmse = sqrt(mean(residuals(lmHeight)^2))
+rmse
 ```
 
 
+## Multiple Linear Regression
+
+Generally speaking, modelling is going to be concerned with looking at more than one factor. In this case, what we can do is use multiple linear regression to assess whether multiple factors are more useful to predict a value.
+
+In this case, we are looking at predicting a cars price based on some characteristics of the car.
 ```{r}
-plot(women, xlab = "Height (in)", ylab = "Weight (lb)",
-     main = "women data: American women aged 30-39")
+automobile <- read.csv("~/FP041/automobile.csv")
 ```
+
+For example, we could look at whether city.mpg is a good predictor of price but doing a simple linear regression model.
 
 ```{r}
-lmHeight = lm(height~weight, data = women) #Create the linear regression
-summary(lmHeight) #Review the results
+model = lm(price ~ `city.mpg`, data = automobile) #Create the linear regression
+summary(model) #Review the results
+```
+
+Not so great with a multiple R squared of 0.4993 and an adjusted R squared of 0.4967. Maybe we can use another variable and see if this helps the model. Lets add highway.mpg. Note, all we do to add another variable is use the + sign and then the next variable.
+
+```{r}
+model = lm(price ~ `city.mpg` + `highway.mpg`, data = automobile) #Create the linear regression
+summary(model) #Review the results
+```
+
+This has improved our multiple R squared to 0.5183 and adjusted R squared to 0.5132. Maybe we can add horsepower to our multiple linear regression model.
+
+```{r}
+model = lm(price ~ `city.mpg` + `highway.mpg` + horsepower, data = automobile) #Create the linear regression
+summary(model) #Review the results
+```
+
+We have improved this more dramatically this time, and our multiple R squared value rises to 0.6803 and adjusted R squared value rises to 0.6753.
+
+We have dealt so far with just numerical data, lets see what happens if we use some categorical data by adding make to our linear regression.
+
+```{r}
+model = lm(price ~ `city.mpg` + `highway.mpg` + horsepower + make, data = automobile) #Create the linear regression
+summary(model) #Review the results
+```
+
+So some things to note with this output. Firstly, our multiple R squared value rises again to 0.9179, and our adjusted R squared value rises to 0.908. But our output looks different. We can see that each make of car is represented, and that some have some * next to their entries, which denotes significance (we can see that these models are a lot better (significant) than others).
+
+Lets check to see if this is right. Remember, we can create a subset of values by using the which command. Lets put all mercedez cars into a smaller dataframe. To compare, lets also put all hondas into a smaller dataframe.
+
+```{r}
+# This code takes all rows where make is mercedes-benz and puts it into a new dataframe called mercedes.
+mercedes <- automobile[which(automobile$make == 'mercedes-benz'),]
+# This code takes all rows where make is honda and puts it into a new dataframe called honda.
+honda <- automobile[which(automobile$make == 'honda'),]
+```
+
+Now lets run our linear regression model, just for all mercedes cars and all honda cars.
+
+```{r}
+model = lm(price ~ `city.mpg` + `highway.mpg` + horsepower, data = mercedes) #Create the linear regression
+summary(model) #Review the results
 ```
 
 ```{r}
-plot(lmHeight)
+model = lm(price ~ `city.mpg` + `highway.mpg` + horsepower, data = honda) #Create the linear regression
+summary(model) #Review the results
 ```
 
-```{r}
-summary(lmHeight)$r.squared
-summary(lmHeight)$adj.r.squared
-```
+We can see that the model is better for mercedes cars 0.9112 and 0.8757, than for honda cars 0.8722 and 0.8297.
+
+### Practical Questions
+
+The main purpose of this week, is to see how we evaluate linear regression models. In our dataset, we have a number of different variables described below. 
+
+make:                     alfa-romero, audi, bmw, chevrolet, dodge, honda,
+                               isuzu, jaguar, mazda, mercedes-benz, mercury,
+                               mitsubishi, nissan, peugot, plymouth, porsche,
+                               renault, saab, subaru, toyota, volkswagen, volvo
+fuel-type:                diesel, gas.
+aspiration:               std, turbo.
+num-of-doors:             four, two.
+body-style:               hardtop, wagon, sedan, hatchback, convertible.
+drive-wheels:             4wd, fwd, rwd.
+engine-location:          front, rear.
+wheel-base:               continuous from 86.6 120.9.
+length:                   continuous from 141.1 to 208.1.
+width:                    continuous from 60.3 to 72.3.
+height:                   continuous from 47.8 to 59.8.
+curb-weight:              continuous from 1488 to 4066.
+engine-type:              dohc, dohcv, l, ohc, ohcf, ohcv, rotor.
+num-of-cylinders:         eight, five, four, six, three, twelve, two.
+engine-size:              continuous from 61 to 326.
+fuel-system:              1bbl, 2bbl, 4bbl, idi, mfi, mpfi, spdi, spfi.
+bore:                     continuous from 2.54 to 3.94.
+stroke:                   continuous from 2.07 to 4.17.
+compression-ratio:        continuous from 7 to 23.
+horsepower:               continuous from 48 to 288.
+peak-rpm:                 continuous from 4150 to 6600.
+city-mpg:                 continuous from 13 to 49.
+highway-mpg:              continuous from 16 to 54.
+price:                    continuous from 5118 to 45400.
+
+Create models to answer the following questions in a R Markdown document.
+
+1. What is the best single variable for predicting price? 
+2. Rank, in order, each variable according to Adjusted R squared and also Root Mean Squared. Are the orders different?
+3. Is there a combination of variables that improves our model? HINT: Combine the single variables that scored best in various ways to see if you can improve the model.
+4. Now that you have found your best combination, answer the following questions:
+  1. Does the model perform better for certain makes of car?
+  2. Does the model work better for standard or turbo cars?
+  3. Does the model work for cars with two or four doors, or is there no difference?
 
 
 ## Conclusion:

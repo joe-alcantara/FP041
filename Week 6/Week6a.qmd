@@ -246,23 +246,25 @@ Is there any difference in the prediction if you use Manhattan Distance or Eucli
 
 Strengths: - Simplicity and ease of implementation.
 
-- No assumptions about the underlying data distribution.
-- Can handle both binary and multi-class classification.
+-   No assumptions about the underlying data distribution.
+-   Can handle both binary and multi-class classification.
 
 Weaknesses: - Sensitive to the choice of k.
 
-- Computationally expensive for large datasets.
-- Affected by irrelevant or noisy features.
+-   Computationally expensive for large datasets.
+-   Affected by irrelevant or noisy features.
 
 ## Applications of k-NN:
 
 k-NN is used in various applications, including: - Image classification.
 
-- Recommender systems.
-- Anomaly detection.
-- Medical diagnosis.
-- Text categorization.
+-   Recommender systems.
+-   Anomaly detection.
+-   Medical diagnosis.
+-   Text categorization.
 
 ## Conclusion:
 
-Classification is a fundamental task in machine learning, and there are several basic models to choose from. k-NN is an intuitive and straightforward classification algorithm that relies on proximity in the feature space. Understanding the strengths, weaknesses, and parameters of k-NN is essential for effective model selection and application.
+Classification is a fundamental task in machine learning, and there are several basic models to choose from.
+k-NN is an intuitive and straightforward classification algorithm that relies on proximity in the feature space.
+Understanding the strengths, weaknesses, and parameters of k-NN is essential for effective model selection and application.

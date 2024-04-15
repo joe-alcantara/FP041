@@ -1,0 +1,128 @@
+---
+title: "K-Nearest Neighbours - Practical"
+format: pdf
+editor: visual
+---
+In the last seminar we talked about how to implement K-nearest-neighbours manually. As with linear regression, when we have a small number of instances this can be calculated manually. However, this becomes time-consuming when dealing with large numbers of data. So what we will do today, is implement k-nearest-neighbours using an R package.
+
+
+## 1. Install and Load Necessary Packages
+
+Before starting, make sure you have R installed on your system. You'll also need to install and load the class package, which provides the knn() function for implementing the k-NN algorithm.
+
+```{r}
+# Install the 'class' package if not already installed
+# install.packages("class")
+
+# Load the 'class' package
+library(class)
+```
+
+
+## 2. Prepare Your Data
+
+For this tutorial, we will import a dataset. On moodle, you will see a dataset called cancer.csv. You need to load this dataset into R and prepare it for training and testing.
+
+```{r}
+# Load the dataset
+data <- read.csv("C:/Users/joe/Downloads/breast+cancer+wisconsin+diagnostic/wdbc.data", header=FALSE)
+
+# View the structure of the dataset
+str(data)
+```
+
+Make sure your dataset contains both the predictor variables (features) and the target variable (the variable you want to predict).
+
+## 3. Split the Data into Training and Testing Sets
+
+Before applying the k-NN algorithm, it's essential to split your data into training and testing sets. This helps evaluate the model's performance.
+
+```{r}
+# Set a random seed for reproducibility
+set.seed(123)
+
+# Split the data into 70% training and 30% testing
+train_index <- sample(1:nrow(data), 0.7 * nrow(data))
+train_data <- data[train_index, ]
+test_data <- data[-train_index, ]
+```
+
+
+## 4. Train the k-NN Model
+
+Now, you can train the k-NN model using the knn() function from the class package.
+
+```{r}
+# Train the k-NN model
+k <- 5  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:32], test = test_data[, 3:32], cl = train_data$V2, k = k)
+```
+
+Make sure to replace predictors with the names of the predictor variables in your dataset and target with the name of the target variable.
+
+## 5. Evaluate the Model
+
+After training the model, you should evaluate its performance using appropriate metrics such as accuracy, precision, recall, or F1 score. We will talk about these more in our next seminar. For now, we will just use accuracy as a measure for evaluating our model.
+
+**Accuracy:** Accuracy is the most straightforward metric, measuring the ratio of correctly predicted instances to the total number of instances. It is suitable when classes are balanced, but it may not be informative for imbalanced datasets.
+
+```{r}
+# Evaluate the model
+accuracy <- mean(model == test_data$V2) * 100
+cat("Accuracy:", accuracy, "%\n")
+```
+
+
+## 6. Fine-Tune the Model (Optional)
+
+You can fine-tune the model by experimenting with different values of k or by selecting different features (as in linear regression)
+
+## Conclusion
+
+In this tutorial, you learned how to implement the k-Nearest Neighbors algorithm in R using the class package. Remember to preprocess your data, split it into training and testing sets, train the model, evaluate its performance, and fine-tune it as needed.
+
+## Practical Exercises
+
+For these exercises, put your code into an R markdown document.
+
+1. Fill in the following chart
+
+| k | accuracy |
+|---|----------|
+| 1 |          |
+| 2 |          |
+| 3 |          |
+| 4 |          |
+| 5 |          |
+| 10 |         |
+| 15 |         |
+| 20 |         |
+| 25 |         |
+| 30 |         |
+| 40 |         |
+| 50 |         |
+
+Describe what you see? 
+Why do you think this is the case? 
+Find the k, with the best accuracy. 
+Plot all values of K in a graph.
+
+2. Pick some combinations of variables in turn (V3 to V32) and run knn with the value you found above. For example, below I have selected columns 3-6. Refer to Week 1, subsetting for help with this. Find the best accuracy you can.
+
+For example the code below runs the model for V3, V4, V5 and V6.
+
+```{r}
+# Train the k-NN model
+k <- 5  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:6], test = test_data[, 3:6], 
+             cl = train_data$V2, k = k)
+```
+
+The code below runs the model for V4, V6, V9
+
+```{r}
+# Train the k-NN model
+k <- 5  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, c(4, 6, 9)], test = test_data[, c(4, 6, 9)], 
+             cl = train_data$V2, k = k)
+```

@@ -18,8 +18,8 @@ output:
 | 5 | Visualisations (Practical) | Week5b.pdf |
 | 6 | Linear Regression (Theory) | Week8a.pdf |
 | 6 | Linear Regression (Practical) | Week8b.pdf |
-| 7 (planned) | Evaluating Regression Models (Theory) | Week7a.pdf |
-| 7 (planned) | Evaluating Regression Models (Practical) | Week7b.pdf |
+| ~~7 (planned)~~ | ~~Evaluating Regression Models (Theory)~~ | ~~Week7a.pdf~~ |
+| ~~7 (planned)~~ | ~~Evaluating Regression Models (Practical)~~ | ~~Week7b.pdf~~ |
 | 7 (actual) | Revision of R concepts | None |
 | 7 (actual) | Revision of R concepts | None |
 |  | EASTER BREAK |  | 

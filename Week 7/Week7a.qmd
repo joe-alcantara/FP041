@@ -23,27 +23,41 @@ There are several common evaluation metrics used for classification models:
 
 4. Confusion Matrix: A confusion matrix provides a detailed breakdown of a model's predictions. It includes counts of true positives, true negatives, false positives, and false negatives.
 
-## Errors that can occur and implications
+## What types of prediction can you have?
 
-### Type 1 Error (False Positive)
+### True Positive (TP):
+**Definition:** When the pregnancy test correctly identifies a positive result, indicating that the person is pregnant, and they are indeed pregnant.
+**Example:** A woman takes a pregnancy test and it accurately detects the presence of pregnancy hormones in her urine, confirming her pregnancy.
+**Calculation for Confusion Matrices:**
+Count the number of instances where the predicted value is true (positive, 1), and the actual value is true (positive, 1).
 
-A Type 1 error occurs when the hypothesis test incorrectly rejects a true null hypothesis. This is also known as a "false positive" result. In other words, the test indicates that there is an effect or a difference when, in fact, there isn't one. The probability of making a Type 1 error is denoted by the alpha level (α), which is set by the researcher before conducting the test. A common alpha level is 0.05, indicating a 5% risk of rejecting the null hypothesis when it is actually true.
+### False Positive (FP):
+A *Type 1* error occurs when the hypothesis test incorrectly rejects a true null hypothesis. This is also known as a "false positive" result. In other words, the test indicates that there is an effect or a difference when, in fact, there isn't one.
 
-Example:
+**Definition:** When the pregnancy test incorrectly identifies a negative result as positive, indicating that the person is pregnant when they are not.
+**Example:** A woman takes a pregnancy test and it erroneously shows a positive result, suggesting pregnancy, but she is not actually pregnant.
+**Calculation for Confusion Matrices:**
+Count the number of instances when the predicted value is true (positive, 1), and the actual value is false (negative, 0).
 
-In a drug trial, a Type 1 error would occur if we conclude that a new medication is effective in treating a condition when it actually has no effect. This would lead to falsely believing in the efficacy of the drug.
+### True Negative (TN):
+**Definition:** When the pregnancy test correctly identifies a negative result, indicating that the person is not pregnant, and they are indeed not pregnant.
+**Example:** A woman takes a pregnancy test, and it accurately shows a negative result, confirming that she is not pregnant, which aligns with her actual status.
+**Calculation for Confusion Matrices:**
+Count the number of instances where the predicted value is false (negative, 0), and the actual value is false (negative, 0)
 
-### Type 2 Error (False Negative)
+### False Negative (FN):
+A *Type 2* error occurs when the hypothesis test fails to reject a false null hypothesis. This is known as a "false negative" result. In this case, the test suggests that there is no effect or difference when, in reality, there is one.
 
-A Type 2 error occurs when the hypothesis test fails to reject a false null hypothesis. This is known as a "false negative" result. In this case, the test suggests that there is no effect or difference when, in reality, there is one. The probability of making a Type 2 error is denoted by the beta level (β), and its complement (1-β) is known as the power of the test, which reflects the test's ability to correctly reject a false null hypothesis.
-
-Example:
-
-In the context of the same drug trial, a Type 2 error would happen if we conclude that the new medication is not effective in treating a condition when it actually is. This would result in overlooking a potentially beneficial treatment.
+**Definition:** When the pregnancy test incorrectly identifies a positive result as negative, indicating that the person is not pregnant when they are.
+**Example:** A woman takes a pregnancy test, but it fails to detect the pregnancy hormones in her urine, showing a negative result, even though she is actually pregnant.
+**Calculation for Confusion Matrices:**
+Count the number of instances when the predicted value is false (negative, 0), and the actual value is true (positive, 1).
 
 ## Balancing Type 1 and Type 2 Errors
 
-In practice, there's often a trade-off between minimizing Type 1 and Type 2 errors. Decreasing the risk of one typically increases the risk of the other. The choice of alpha level affects this balance; a lower alpha level reduces the risk of a Type 1 error but may increase the risk of a Type 2 error, and vice versa. The optimal balance depends on the specific context and the consequences of each type of error. For instance, in medical testing, it might be preferable to accept a higher risk of Type 1 errors (falsely identifying a condition) to reduce the risk of Type 2 errors (missing a diagnosis), given the potential health implications.
+In practice, it is difficult to get 100 percent accuracy on any classification model. Therefore, there's often a trade-off between minimizing Type 1 and Type 2 errors and modellers will often have to make a concious decision to bias the model in favour of one or the other. 
+
+The optimal balance depends on the specific context and the consequences of each type of error. For instance, in medical testing, it might be preferable to accept a higher risk of Type 1 errors (falsely identifying a condition) to reduce the risk of Type 2 errors (missing a diagnosis), given the potential health implications.
 
 ## Worked Example
 

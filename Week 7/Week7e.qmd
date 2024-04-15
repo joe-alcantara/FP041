@@ -6,11 +6,9 @@ editor: visual
 
 Suppose you have a binary classification problem with the following actual classes and predicted classes for a sample of 40 observations:
 
-Actual Classes: 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1,
-1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0
+Actual Classes: 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0
 
-Predicted Classes: 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1,
-1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0
+Predicted Classes: 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0
 
 In order to evaluate the effectiveness of a model, follow these steps:
 
@@ -22,11 +20,11 @@ Manually create a 2x2 confusion matrix using the actual classes and predicted cl
 
 Calculate the following evaluation metrics:
 
-- Accuracy
-- Precision
-- Recall (Sensitivity)
-- Specificity
-- F1 Score
+-   Accuracy
+-   Precision
+-   Recall (Sensitivity)
+-   Specificity
+-   F1 Score
 
 **Interpretation:**
 
@@ -36,19 +34,19 @@ Interpret the calculated evaluation metrics to assess the performance of the cla
 
 Compare the model above to three other models.
 
-|  | Predicted Negative (0) |	Predicted Positive (1) |
-|---|---|---|
-| Actual Negative (0) |	16 | 1 |
-| Actual Positive (1)	| 5	| 18 |
+|                     | Predicted Negative (0) | Predicted Positive (1) |
+|---------------------|------------------------|------------------------|
+| Actual Negative (0) | 16                     | 1                      |
+| Actual Positive (1) | 5                      | 18                     |
 
-|  | Predicted Negative (0) |	Predicted Positive (1) |
-|---|---|---|
-| Actual Negative (0) |	10 | 7 |
-| Actual Positive (1) |	12 | 11 |
+|                     | Predicted Negative (0) | Predicted Positive (1) |
+|---------------------|------------------------|------------------------|
+| Actual Negative (0) | 10                     | 7                      |
+| Actual Positive (1) | 12                     | 11                     |
 
-|  | Predicted Negative (0) |	Predicted Positive (1) |
-|---|---|---|
-| Actual Negative (0) |	16 | 1 |
-| Actual Positive (1) |	0 |	23 |
+|                     | Predicted Negative (0) | Predicted Positive (1) |
+|---------------------|------------------------|------------------------|
+| Actual Negative (0) | 16                     | 1                      |
+| Actual Positive (1) | 0                      | 23                     |
 
 Calculate evaluation metrics for all the above models and interpret each module, comparing and contrasting each model. Which model do you recommend for the above scenario. Justify your answer.

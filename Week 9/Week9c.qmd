@@ -1,0 +1,39 @@
+---
+title: "Seminar 2 - Formative Task for your first summative - Notes"
+format: pdf
+editor: visual
+---
+
+## Formative Exercise for Summative 1.
+
+Download the following file from Moodle. 'kc_house_data.csv'. This dataset contains house sale prices for King County, which includes Seattle. It includes homes sold between May 2014 and May 2015. We are a company that wants to improve a pricing model for house prices in this area. In order to do this we want to know what are the most important predictors for housing prices. In pairs. Do the following. 
+
+1. Create an R markdown document.
+
+*Note* - this should be straightforward. There will be a video on how to do this, that you can refer people to.
+
+2. Use R to create some descriptive statistics.
+
+*Note* this is from Week 4, the students should be able to isolate a variable and create a mean, median, etc..... They should also be able to use summary(), to create a summary of the data but you should inform them that this by itself doesn't count as presenting the data.
+
+3. Use R to plot some descriptive statistics.
+4. Use R to plot pairs of variables and identify any relationships. 
+
+*Note* this is from Week 5. The students should be able to identify the most appropriate plot, given the type of data. You may need to go over the best types of plot for a given dataset. You also may need to go over things like plot titles, labelling x and y axes.
+
+5. Identify some correlations
+
+*Note* this is from Week 6. Students should, based on the work they did in the previous exercise above, be able to visually identify some relationship. Now we can get them to quantify the nature of the relationships using the cor() function.
+
+6. Create some single linear regression models, identify the best of these.
+7. Create some multiple linear regression models, identify the best of these.
+
+*Note* this is from earlier in the week. So this should be familiar to them. Equally, they will have a video that talks them through this.
+
+8. Write down some conclusions.
+
+*Note* You may have to talk them through what conclusions they may reach.
+
+9. Export your markdown document as a pdf.
+
+*Note* This should be relatively straightforward. 

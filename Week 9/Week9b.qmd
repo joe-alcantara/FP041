@@ -1,26 +1,27 @@
 ---
-title: "Week9b.qmd"
+title: "Seminar 2 - Formative Task for your first summative."
 format: pdf
 editor: visual
 ---
 
-## Quarto
+## Formative Exercise for Summative 1.
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+Download the following file from Moodle. 'kc_house_data.csv'. This dataset contains house sale prices for King County, which includes Seattle. It includes homes sold between May 2014 and May 2015. We are a company that wants to improve a pricing model for house prices in this area. In order to do this we want to know what are the most important predictors for housing prices. In pairs. Do the following. 
 
-## Running Code
+1. Create an R markdown document.
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+2. Use R to create some descriptive statistics.
 
-```{r}
-1 + 1
-```
+3. Use R to plot some descriptive statistics.
 
-You can add options to executable code like this
+4. Use R to plot pairs of variables and identify any relationships. 
 
-```{r}
-#| echo: false
-2 * 2
-```
+5. Identify some correlations
 
-The `echo: false` option disables the printing of code (only output is displayed).
+6. Create some single linear regression models, identify the best of these.
+
+7. Create some multiple linear regression models, identify the best of these.
+
+8. Write down some conclusions.
+
+9. Export your markdown document as a pdf.

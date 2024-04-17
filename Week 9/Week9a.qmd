@@ -41,6 +41,8 @@ where ŷ is the predicted value.
 
 R² represents the proportion of variance in the dependent variable explained by the model. It ranges from 0 to 1, where a higher value indicates a better fit.
 
+% Calculate SSE and SST
+
 $$R^2 = 1 - (SSE / SST)$$
 
 where SSE is the sum of squared errors and SST is the total sum of squares.
@@ -52,6 +54,8 @@ Adjusted R² adjusts R² for the number of predictors in the model. It penalizes
 $$Adjusted R^2 = 1 - [(1 - R²) * ((n - 1) / (n - p - 1))]$$
 
 where n is the number of data points and p is the number of predictors.
+
+6. Multiple R squared.
 
 ## Model Validation Techniques in R:
 
@@ -72,14 +76,14 @@ plot(women, xlab = "Height (in)", ylab = "Weight (lb)",
 ```
 
 
-The summary() function provides a summary of the regression model, including coefficients, standard errors, t-values, and p-values for each predictor.
+The summary() function provides a summary of the regression model, including coefficients, standard errors, and metrics for evaluating the effectiveness of the model.
 
 Example: 
 ```
 summary(lm_model)
 ```
 
-Below we have created a linear regression model, where we use height as the dependent variable and weight as the independent variable.
+Below we have created a linear regression model, where we use weight as the dependent variable and height    as the independent variable.
 
 ```{r}
 lmHeight = lm(height~weight, data = women) #Create the linear regression
@@ -130,7 +134,7 @@ Generally speaking, modelling is going to be concerned with looking at more than
 
 In this case, we are looking at predicting a cars price based on some characteristics of the car.
 ```{r}
-automobile <- read.csv("~/FP041/automobile.csv")
+automobile <- read.csv("~/automobile.csv")
 ```
 
 For example, we could look at whether city.mpg is a good predictor of price but doing a simple linear regression model.
@@ -150,7 +154,7 @@ summary(model) #Review the results
 This has improved our multiple R squared to 0.5183 and adjusted R squared to 0.5132. Maybe we can add horsepower to our multiple linear regression model.
 
 ```{r}
-model = lm(price ~ `city.mpg` + `highway.mpg` + horsepower, data = automobile) #Create the linear regression
+model = lm(price ~ `city.mpg` + `highway.mpg` + `horsepower`, data = automobile) #Create the linear regression
 summary(model) #Review the results
 ```
 

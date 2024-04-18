@@ -37,11 +37,27 @@ $$MAE = \frac{\sum{|y_i - \bar{y}|}}{n} $$
 
 where ŷ is the predicted value.
 
-4. R-squared (R²):
+4. Multiple R-squared (R^2):
 
-R² represents the proportion of variance in the dependent variable explained by the model. It ranges from 0 to 1, where a higher value indicates a better fit.
+R² represents the proportion of variance in the dependent variable explained by the model. It ranges from 0 to 1, where a higher value indicates a better fit. For this we need to calculate two terms. 
 
-% Calculate SSE and SST
+*Sum of Squared Errors*
+
+The sum of squares error (SSE) or residual sum of squares (RSS, where residual means remaining or unexplained) is the difference between the observed and predicted values.
+
+$$SSE = \sum{\epsilon_i^2}$$
+
+where \epsilon is the difference between the acutal value of the dependent variable and the predicted value.
+
+$$\epsilon_i = y_i - \hat{y}$$
+
+*Sum of Squares Total*
+The sum of squares total (SST) or the total sum of squares (TSS) is the sum of squared differences between the observed dependent variables and the overall mean. 
+
+$$SST = \sum{(y_i - \bar{y})^2}$$
+Where $y_i$ is the observed dependant value and $\bar{y}$ is the mean of the dependent variable.
+
+From these two variables, you are able to calculate Multiple R-squared.
 
 $$R^2 = 1 - (SSE / SST)$$
 
@@ -55,7 +71,6 @@ $$Adjusted R^2 = 1 - [(1 - R²) * ((n - 1) / (n - p - 1))]$$
 
 where n is the number of data points and p is the number of predictors.
 
-6. Multiple R squared.
 
 ## Model Validation Techniques in R:
 
@@ -163,13 +178,27 @@ We have improved this more dramatically this time, and our multiple R squared va
 We have dealt so far with just numerical data, lets see what happens if we use some categorical data by adding make to our linear regression.
 
 ```{r}
-model = lm(price ~ `city.mpg` + `highway.mpg` + horsepower + make, data = automobile) #Create the linear regression
+model = lm(price ~ `city.mpg` + `highway.mpg` + `horsepower` + `make`, data = automobile) #Create the linear regression
 summary(model) #Review the results
 ```
 
-So some things to note with this output. Firstly, our multiple R squared value rises again to 0.9179, and our adjusted R squared value rises to 0.908. But our output looks different. We can see that each make of car is represented, and that some have some * next to their entries, which denotes significance (we can see that these models are a lot better (significant) than others).
+So some things to note with this output. Firstly, our multiple R squared value rises again to 0.9179, and our adjusted R squared value rises to 0.908. But our output looks different. We can see that each make of car is represented, and that some have some * next to their entries, which denotes significance (we can see that these models are a lot better (significant) than others). Before we go any further, lets look at what p values are.
 
-Lets check to see if this is right. Remember, we can create a subset of values by using the which command. Lets put all mercedez cars into a smaller dataframe. To compare, lets also put all hondas into a smaller dataframe.
+As we know,in a linear regression model, coefficients represent the relationship between the independent variable(s) and the dependent variable. For example, in a simple linear regression y=mx+by=mx+b, 'm' is the coefficient (slope) of the independent variable 'x'.
+
+*Null Hypothesis (H0):* The null hypothesis states that there is no relationship between the independent variable(s) and the dependent variable, i.e., the coefficient(s) equal zero.
+
+*Alternative Hypothesis (H1):* The alternative hypothesis complements the null hypothesis by proposing that there is indeed a relationship between the independent variable(s) and the dependent variable, contrary to the null hypothesis. It suggests that the coefficient(s) in the regression equation are not equal to zero.
+        
+*P-value:* The p-value associated with each coefficient indicates the probability of observing the coefficient's value, or more extreme, if the null hypothesis is true. In other words, it tells us the likelihood of the observed relationship occurring by random chance. A significant p-value leads to rejecting the null hypothesis in favor of the alternative hypothesis, indicating that there is evidence supporting a relationship between the independent variable(s) and the dependent variable. Conversely, a non-significant p-value suggests that there is insufficient evidence to reject the null hypothesis, indicating that the relationship between the variables is not statistically significant.
+
+*Interpretation:* If the p-value is small (typically less than a chosen significance level, often 0.05), it suggests that the coefficient is statistically significant. In other words, we reject the null hypothesis and conclude that there is evidence of a significant relationship between the independent variable and the dependent variable. If the p-value is large, it suggests that the coefficient is not statistically significant. In this case, we fail to reject the null hypothesis, indicating that there is insufficient evidence to conclude a significant relationship.
+
+*Decision:* Based on the p-value, you decide whether to retain or reject the null hypothesis. If you reject the null hypothesis, it implies that the variable associated with the coefficient in question is indeed contributing significantly to the model's predictive power.
+
+Overall, p-values help researchers determine the validity of their regression models and the significance of the variables included. However, it's essential to interpret p-values in conjunction with other metrics and considerations to make informed decisions about model selection and variable significance.
+
+Now we know what a p value is, we can see that there are certain values which are more useful than others, as indicated by the asterisks (*). Lets check to see if this is right. Remember, we can create a subset of values by using the which command. Lets put all mercedez cars into a smaller dataframe. To compare, lets also put all hondas into a smaller dataframe.
 
 ```{r}
 # This code takes all rows where make is mercedes-benz and puts it into a new dataframe called mercedes.

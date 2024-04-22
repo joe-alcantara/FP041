@@ -264,7 +264,7 @@ automobile <- read.csv("~/automobile.csv")
 For example, we could look at whether city.mpg is a good predictor of price but doing a simple linear regression model.
 
 ```{r}
-model = lm(price ~ `city.mpg`, data = automobile) #Create the linear regression
+model = lm(price ~ city.mpg, data = automobile) #Create the linear regression
 summary(model) #Review the results
 ```
 
@@ -293,7 +293,7 @@ summary(model) #Review the results
 
 So some things to note with this output. Firstly, our multiple R squared value rises again to 0.9179, and our adjusted R squared value rises to 0.908. But our output looks different. We can see that each make of car is represented, and that some have some * next to their entries, which denotes significance (we can see that these models are a lot better (significant) than others). Before we go any further, lets look at what p values are.
 
-As we know,in a linear regression model, coefficients represent the relationship between the independent variable(s) and the dependent variable. For example, in a simple linear regression y=mx+by=mx+b, 'm' is the coefficient (slope) of the independent variable 'x'.
+As we know,in a linear regression model, coefficients represent the relationship between the independent variable(s) and the dependent variable. For example, in a simple linear regression y=mx+b, 'm' is the coefficient (slope) of the independent variable 'x'.
 
 *Null Hypothesis (H0):* The null hypothesis states that there is no relationship between the independent variable(s) and the dependent variable, i.e., the coefficient(s) equal zero.
 
@@ -328,7 +328,7 @@ model = lm(price ~ `city.mpg` + `highway.mpg` + horsepower, data = honda) #Creat
 summary(model) #Review the results
 ```
 
-We can see that the model is better for mercedes cars 0.9112 and 0.8757, than for honda cars 0.8722 and 0.8297.
+We can see that the model is better for mercedes cars 0.9112 and 0.8757, than for honda cars 0.9348 and 0.8697.
 
 ### Practical Questions
 

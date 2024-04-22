@@ -71,6 +71,115 @@ $$Adjusted R^2 = 1 - [(1 - R²) * ((n - 1) / (n - p - 1))]$$
 
 where n is the number of data points and p is the number of predictors.
 
+## Exercise
+
+Let's assume we have the following dataset representing the relationship between the number of hours studied and exam scores for a group of students:
+
+| Hours Studied (x) |	Exam Score (y) |
+|---|----|
+| 2 |	60 |
+| 3 |	70 |
+| 4	| 80 |
+| 5 |	85 |
+| 6 |	90 |
+
+We want to build a simple linear regression model to predict exam scores based on the number of hours studied.
+
+1. Calculate the regression line equation:
+
+Using the formulas:
+
+$$m=\frac{n(\sum{xy}−(\sum{x})(\sum{y}))}{n(\sum{x^2})−(\sum{x})^2}$$
+$$b=\frac{\sum{y}=m(\sum{x})}{n}$$
+  
+Where:
+- $=5$
+- $\sum{x}=20$
+- $\sum{y}=385$
+- $\sum{xy}=1350$
+- $\sum{x^2}=70$
+
+Calculating:
+
+$$m=\frac{5(1350)−(20)(385)}{5(70)−(20)^2}=\frac{6750−7700}{350−400}=\frac{−950}{−50}=19$$
+
+$$b=\frac{385−19(20)}{5}=\frac{385−380}{5}=\frac{5}{5}=1$$
+So, the regression line equation is: $y=19x+1$
+
+2. Calculate the predicted exam scores ($\hat{y}$):
+
+Plug in the values of xx into the regression line equation to get $\hat{y}$.
+
+Calculating:
+
+For $x=2: \hat{y}=19(2)+1=39$
+For $x=3: \hat{y}=19(3)+1=58$
+For $x=4: \hat{y}=19(4)+1=77$
+For $x=5: \hat{y}=19(5)+1=96$
+For $x=6: \hat{y}=19(6)+1=115$
+
+So, the predicted exam scores are: 
+
+$\hat{y}=[39,58,77,96,115]$
+
+3. Calculate the residuals ($e_i$):
+
+Subtract the predicted exam scores from the actual exam scores.
+
+Calculating:
+
+For $x=2: e_1=60−39=21$
+For $x=3: e_2=70−58=12$
+For $x=4: e_3=80−77=3$
+For $x=5: e_4=85−96=−11$
+For $x=6: e_5=90−115=−25$
+
+So, the residuals are: 
+
+$e=[21,12,3,−11,−25]$
+
+4. Calculate the Mean Squared Error (MSE):
+
+$$MSE = \frac{\sum(y_i- \bar{y})^2}{n}$$
+We have calculated $y_i - \bar{r}$ as $e_i$ in the step above.
+
+Calculating:
+
+$$MSE=\frac{(21^2+12^2+3^2+(−11)^2+(−25)^2)}{5}=\frac{(441+144+9+121+625)}{5}= 268$$
+
+So, the Mean Squared Error is MSE = 268
+
+5. Calculate the Root Mean Squared Error (RMSE):
+
+$$RMSE = \sqrt{MSE}$$
+
+Calculating:
+
+$$RMSE=\sqrt{268}≈16.37$$
+
+So, the Root Mean Squared Error is approximately 16.37
+
+6. Calculate the Mean Absolute Error (MAE):
+
+$$MAE = \frac{\sum{|y_i - \bar{y}|}}{n} $$
+Once again, we have calculated $y_i - \bar{r}$ as $e_i$ in the step above.
+
+Calculating:
+
+$$MAE=\frac{|21|+|12|+|3|+|-11|+|-25|}{5}=\frac{(21+12+3+11+25)}{5}=\frac{72}{5}=14.4$$
+So, the Mean Absolute Error is MAE=14.4.
+
+## Now you.
+
+Suppose we have the following dataset representing the relationship between the number of hours spent studying and the exam scores for a different group of students:
+
+| Hours Studied (x) |	Exam Score (y) |
+|---|---|
+| 3 |	75 |
+| 4 |	80 |
+| 6 |	90 |
+| 7 |	85 |
+| 9 |	95 |
 
 ## Model Validation Techniques in R:
 

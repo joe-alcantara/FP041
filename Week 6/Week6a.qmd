@@ -66,44 +66,21 @@ This helps in scheduling maintenance to prevent unexpected downtimes.
 
 **Environmental Monitoring:** Classification models are used in monitoring and managing natural resources, such as classifying land use in satellite images or detecting pollutants in water sources.
 
-## Basic Classification Models:
-
-There are several basic classification models, each with its own characteristics and applications:
-
-1.  Logistic Regression:
-
-Logistic regression is a linear model used for binary classification (two classes).
-It models the probability of an input belonging to one of the two classes using a logistic (S-shaped) curve.
-
-2.  Decision Trees:
-
-Decision trees are versatile models that can be used for both binary and multi-class classification.
-They partition the input space into regions based on a series of if-then-else rules.
-
-3.  Naïve Bayes:
-
-Naïve Bayes is a probabilistic model that is particularly useful for text classification and spam detection.
-It relies on Bayes' theorem and assumes independence between features.
-
-4.  k-Nearest Neighbors (k-NN):
-
-k-NN is a non-parametric and instance-based classification algorithm.
-It classifies data points based on their proximity to other data points in the feature space.
-
 For the purposes of this module, we will be focused on k-nearest neighbours.
 
 ## k-Nearest Neighbours (k-NN):
 
 k-NN is a simple yet effective classification algorithm that works based on the premise that the closer two data points are together, the more likely they are of the same class.
 
-Lets consider a simple example with tumor size (in mm) and whether they are benign or malignant.
-The blue dots are malignant tumors and the orange dots are benign tumors.
+Lets consider a simple example. Consider we have a ball bearing factory, and we require all ball bearings to be below a threshold. If they meet this condition, we accept it. If they do not, then we don't accept it. 
+
+Consider the following diagram. The blue dots are rejected ball bearings  and the orange dots are accepted.
 
 ![check](images/classification1.png){width="80%"}
 
 Is there a rule we can apply here?
 
-What happens then, we have a new tumor (indicated by the yellow dot) that hasn't been classified?
+What happens then, we have a new ballbearing (indicated by the yellow dot) that hasn't been classified?
 what would you classify this as using this rule?
 
 ![check](images/classificationNewInstance.png)
@@ -113,7 +90,7 @@ Is there a rule?
 
 ![check](images/classification2.png)
 
-Now, we add a new tumor for you to identify.
+Now, we add a new ballbearing for you to identify.
 What would you class this as?
 
 ![check](images/classification2NewInstance.png)
@@ -125,17 +102,17 @@ Luckily we can use k-Nearest Neighbours to figure this out.
 
 Here is the k-nearest neighbours process, or algorithm
 
-1.  Choose the value of k, the number of nearest neighbours to consider (an odd number is often chosen to avoid ties).
+1.  Choose the value of k, the number of nearest neighbours to consider (**an odd number is often chosen to avoid ties**).
 2.  Compute the distance between the input data point and all other data points in the dataset.
 3.  Select the k-nearest neighbours based on the computed distances.
 4.  Count the class labels of the k-nearest neighbours and assign the majority class label to the input data point.
 
 ## Back to our example
 
-If we compared our new tumour (yellow) to the closest neighbour (k = 1).
-We would classify this as benign as the closest dot to the yellow dot in figure 5 is orange.
+If we compared our new ballbearing (yellow) to the closest neighbour (k = 1).
+We would classify this as accepted  as the closest dot to the yellow dot in figure 5 is orange.
 Lets say that we want to use three neighbours (k = 3), the three dots closest to the yellow dot are orange, blue and blue.
-Blue wins because there are more blue dots (2) than orange dots (1) to the yellow dot.
+Blue wins (meaning we class the yellow dot as accepted) because there are more blue dots (2) than orange dots (1) to the yellow dot.
 
 ![check](images/classification2NewInstance-01.png)
 
@@ -145,33 +122,37 @@ Lets think about the k-NN model intuitively.
 What we are basically saying is, if two objects share similar characteristics, they may be the same class of object.
 Now, of course that may also not be true for many reasons and we can be critical of this as a model later.
 
-## Example.
+## Worked Example
 
 Plot these tumors on an x-axis (as above).
 Hint, use X to represent benign and O to represent malignant.
 
-| Tumor Size | Classification |
+# Give worked example
+# Change the context of the example 
+
+
+| Ballbearing Size | Classification |
 |------------|----------------|
-| 4.3        | Malignant      |
-| 2.2        | Benign         |
-| 3.5        | Malignant      |
-| 1.5        | Benign         |
-| 3.3        | Malignant      |
-| 2.6        | Malignant      |
-| 2.5        | Malignant      |
-| 3.2        | Benign         |
-| 2.9        | Benign         |
+| 4.3        | Rejected      |
+| 2.2        | Accepted         |
+| 3.5        | Rejected      |
+| 1.5        | Accepted         |
+| 3.3        | Rejected      |
+| 2.6        | Rejected      |
+| 2.5        | Rejected      |
+| 3.2        | Accepted         |
+| 2.9        | Accepted         |
 
-Now, think about the following tumors with no classification.
+Now, think about the following ballbearings with no classification.
 
-Using K-NN of 1, 3 and 5, predict the classification of the following tumours
+Using K-NN of 1, 3 and 5, predict the classification of the following ballbearings
 
 1.  2.8
 2.  3.9
 3.  0.7
 
 What do you notice?
-Are there any tumors where the classification changes when you use different values of k?
+Are there any ballbearings where the classification changes when you use different values of k?
 
 ## Parameters of k-NN:
 
@@ -240,19 +221,9 @@ Using K-NN of 1, 3 and 5, predict the classification of the following tumours
 
 What do you notice?
 Are there any tumors where the classification changes when you use different values of k?
+
 Is there any difference in the prediction if you use Manhattan Distance or Euclidian Distance?
 
-## Strengths and Weaknesses of k-NN:
-
-Strengths: - Simplicity and ease of implementation.
-
--   No assumptions about the underlying data distribution.
--   Can handle both binary and multi-class classification.
-
-Weaknesses: - Sensitive to the choice of k.
-
--   Computationally expensive for large datasets.
--   Affected by irrelevant or noisy features.
 
 ## Applications of k-NN:
 

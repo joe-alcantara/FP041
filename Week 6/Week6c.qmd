@@ -92,7 +92,7 @@ For these exercises, put your code into an R markdown document.
 | 3   |          |
 | 4   |          |
 | 5   |          |
-| 9  |          |
+| 9   |          |
 | 15  |          |
 | 21  |          |
 | 26  |          |
@@ -102,21 +102,328 @@ For these exercises, put your code into an R markdown document.
 
 Describe what you see? Why do you think this is the case? Find the k, with the best accuracy. Plot all values of K in a graph.
 
-2. Fill in the following chart. Run knn with the value you found above but change the train/test values.
+```{r}
+# Train the 1-NN model
+k <- 1  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:32], test = test_data[, 3:32], 
+             cl = train_data$V2, k = k)
+# Evaluate the model
+accuracy <- mean(model == test_data$V2) * 100
+cat("Accuracy:", accuracy, "%\n")
+```
+
+```{r}
+# Train the 2-NN model
+k <- 2  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:32], test = test_data[, 3:32], 
+             cl = train_data$V2, k = k)
+# Evaluate the model
+accuracy <- mean(model == test_data$V2) * 100
+cat("Accuracy:", accuracy, "%\n")
+```
+
+```{r}
+# Train the 3-NN model
+k <- 3  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:32], test = test_data[, 3:32], 
+             cl = train_data$V2, k = k)
+# Evaluate the model
+accuracy <- mean(model == test_data$V2) * 100
+cat("Accuracy:", accuracy, "%\n")
+```
+
+```{r}
+# Train the 5-NN model
+k <- 5  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:32], test = test_data[, 3:32], 
+             cl = train_data$V2, k = k)
+# Evaluate the model
+accuracy <- mean(model == test_data$V2) * 100
+cat("Accuracy:", accuracy, "%\n")
+```
+
+```{r}
+# Train the 9-NN model
+k <- 9  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:32], test = test_data[, 3:32], 
+             cl = train_data$V2, k = k)
+# Evaluate the model
+accuracy <- mean(model == test_data$V2) * 100
+cat("Accuracy:", accuracy, "%\n")
+```
+
+```{r}
+# Train the 15-NN model
+k <- 15  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:32], test = test_data[, 3:32], 
+             cl = train_data$V2, k = k)
+# Evaluate the model
+accuracy <- mean(model == test_data$V2) * 100
+cat("Accuracy:", accuracy, "%\n")
+```
+
+```{r}
+# Train the 21-NN model
+k <- 21  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:32], test = test_data[, 3:32], 
+             cl = train_data$V2, k = k)
+# Evaluate the model
+accuracy <- mean(model == test_data$V2) * 100
+cat("Accuracy:", accuracy, "%\n")
+```
+
+```{r}
+# Train the 26-NN model
+k <- 26  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:32], test = test_data[, 3:32], 
+             cl = train_data$V2, k = k)
+# Evaluate the model
+accuracy <- mean(model == test_data$V2) * 100
+cat("Accuracy:", accuracy, "%\n")
+```
+```{r}
+# Train the 31-NN model
+k <- 31  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:32], test = test_data[, 3:32], 
+             cl = train_data$V2, k = k)
+# Evaluate the model
+accuracy <- mean(model == test_data$V2) * 100
+cat("Accuracy:", accuracy, "%\n")
+```
+
+```{r}
+# Train the 41-NN model
+k <- 41  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:32], test = test_data[, 3:32], 
+             cl = train_data$V2, k = k)
+# Evaluate the model
+accuracy <- mean(model == test_data$V2) * 100
+cat("Accuracy:", accuracy, "%\n")
+```
+
+```{r}
+# Train the 51-NN model
+k <- 51  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:32], test = test_data[, 3:32], 
+             cl = train_data$V2, k = k)
+# Evaluate the model
+accuracy <- mean(model == test_data$V2) * 100
+cat("Accuracy:", accuracy, "%\n")
+```
+
+2.  Fill in the following chart. Run knn with the value you found above but change the train/test values.
 
 | Train | Test | Accuracy |
 |-------|------|----------|
-| 10 | 90 |   |
-| 20 | 80 |   | 
-| 30 | 70 |   |
-| 40 | 60 |   |
-| 50 | 50 |   |
-| 60 | 40 |   |
-| 70 | 30 |   |
-| 80 | 20 |   |
-| 90 | 10 |   |
-| 95 | 5 |   |
-| 99 | 1 |   |
+| 10    | 90   |          |
+| 20    | 80   |          |
+| 30    | 70   |          |
+| 40    | 60   |          |
+| 50    | 50   |          |
+| 60    | 40   |          |
+| 70    | 30   |          |
+| 80    | 20   |          |
+| 90    | 10   |          |
+| 95    | 5    |          |
+| 99    | 1    |          |
+
+```{r}
+# Set a random seed for reproducibility
+set.seed(123)
+
+# Split the data into 10% training and 90% testing
+train_index <- sample(1:nrow(data), 0.1 * nrow(data))
+train_data <- data[train_index, ]
+test_data <- data[-train_index, ]
+
+# Train the 1-NN model
+k <- 1  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:32], test = test_data[, 3:32], 
+             cl = train_data$V2, k = k)
+# Evaluate the model
+accuracy <- mean(model == test_data$V2) * 100
+cat("Accuracy:", accuracy, "%\n")
+```
+
+```{r}
+# Set a random seed for reproducibility
+set.seed(123)
+
+# Split the data into 20% training and 80% testing
+train_index <- sample(1:nrow(data), 0.1 * nrow(data))
+train_data <- data[train_index, ]
+test_data <- data[-train_index, ]
+
+# Train the 1-NN model
+k <- 1  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:32], test = test_data[, 3:32], 
+             cl = train_data$V2, k = k)
+# Evaluate the model
+accuracy <- mean(model == test_data$V2) * 100
+cat("Accuracy:", accuracy, "%\n")
+```
+
+```{r}
+# Set a random seed for reproducibility
+set.seed(123)
+
+# Split the data into 30% training and 70% testing
+train_index <- sample(1:nrow(data), 0.3 * nrow(data))
+train_data <- data[train_index, ]
+test_data <- data[-train_index, ]
+
+# Train the 1-NN model
+k <- 1  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:32], test = test_data[, 3:32], 
+             cl = train_data$V2, k = k)
+# Evaluate the model
+accuracy <- mean(model == test_data$V2) * 100
+cat("Accuracy:", accuracy, "%\n")
+```
+
+```{r}
+# Set a random seed for reproducibility
+set.seed(123)
+
+# Split the data into 40% training and 60% testing
+train_index <- sample(1:nrow(data), 0.4 * nrow(data))
+train_data <- data[train_index, ]
+test_data <- data[-train_index, ]
+
+# Train the 1-NN model
+k <- 1  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:32], test = test_data[, 3:32], 
+             cl = train_data$V2, k = k)
+# Evaluate the model
+accuracy <- mean(model == test_data$V2) * 100
+cat("Accuracy:", accuracy, "%\n")
+```
+
+```{r}
+# Set a random seed for reproducibility
+set.seed(123)
+
+# Split the data into 50% training and 50% testing
+train_index <- sample(1:nrow(data), 0.5 * nrow(data))
+train_data <- data[train_index, ]
+test_data <- data[-train_index, ]
+
+# Train the 1-NN model
+k <- 1  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:32], test = test_data[, 3:32], 
+             cl = train_data$V2, k = k)
+# Evaluate the model
+accuracy <- mean(model == test_data$V2) * 100
+cat("Accuracy:", accuracy, "%\n")
+```
+
+```{r}
+# Set a random seed for reproducibility
+set.seed(123)
+
+# Split the data into 60% training and 40% testing
+train_index <- sample(1:nrow(data), 0.6 * nrow(data))
+train_data <- data[train_index, ]
+test_data <- data[-train_index, ]
+
+# Train the 1-NN model
+k <- 1  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:32], test = test_data[, 3:32], 
+             cl = train_data$V2, k = k)
+# Evaluate the model
+accuracy <- mean(model == test_data$V2) * 100
+cat("Accuracy:", accuracy, "%\n")
+```
+
+```{r}
+# Set a random seed for reproducibility
+set.seed(123)
+
+# Split the data into 70% training and 30% testing
+train_index <- sample(1:nrow(data), 0.7 * nrow(data))
+train_data <- data[train_index, ]
+test_data <- data[-train_index, ]
+
+# Train the 1-NN model
+k <- 1  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:32], test = test_data[, 3:32], 
+             cl = train_data$V2, k = k)
+# Evaluate the model
+accuracy <- mean(model == test_data$V2) * 100
+cat("Accuracy:", accuracy, "%\n")
+```
+
+```{r}
+# Set a random seed for reproducibility
+set.seed(123)
+
+# Split the data into 80% training and 20% testing
+train_index <- sample(1:nrow(data), 0.8 * nrow(data))
+train_data <- data[train_index, ]
+test_data <- data[-train_index, ]
+
+# Train the 1-NN model
+k <- 1  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:32], test = test_data[, 3:32], 
+             cl = train_data$V2, k = k)
+# Evaluate the model
+accuracy <- mean(model == test_data$V2) * 100
+cat("Accuracy:", accuracy, "%\n")
+```
+
+```{r}
+# Set a random seed for reproducibility
+set.seed(123)
+
+# Split the data into 90% training and 10% testing
+train_index <- sample(1:nrow(data), 0.9 * nrow(data))
+train_data <- data[train_index, ]
+test_data <- data[-train_index, ]
+
+# Train the 1-NN model
+k <- 1  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:32], test = test_data[, 3:32], 
+             cl = train_data$V2, k = k)
+# Evaluate the model
+accuracy <- mean(model == test_data$V2) * 100
+cat("Accuracy:", accuracy, "%\n")
+```
+
+```{r}
+# Set a random seed for reproducibility
+set.seed(123)
+
+# Split the data into 95% training and 5% testing
+train_index <- sample(1:nrow(data), 0.95 * nrow(data))
+train_data <- data[train_index, ]
+test_data <- data[-train_index, ]
+
+# Train the 1-NN model
+k <- 1  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:32], test = test_data[, 3:32], 
+             cl = train_data$V2, k = k)
+# Evaluate the model
+accuracy <- mean(model == test_data$V2) * 100
+cat("Accuracy:", accuracy, "%\n")
+```
+
+```{r}
+# Set a random seed for reproducibility
+set.seed(123)
+
+# Split the data into 99% training and 1% testing
+train_index <- sample(1:nrow(data), 0.99 * nrow(data))
+train_data <- data[train_index, ]
+test_data <- data[-train_index, ]
+
+# Train the 1-NN model
+k <- 1  # Specify the number of neighbors (you can choose any value)
+model <- knn(train = train_data[, 3:32], test = test_data[, 3:32], 
+             cl = train_data$V2, k = k)
+# Evaluate the model
+accuracy <- mean(model == test_data$V2) * 100
+cat("Accuracy:", accuracy, "%\n")
+```
 
 3.  Pick some combinations of variables in turn (V3 to V32) and run knn with the value you found above. For example, below I have selected columns 3-6. Refer to Week 1, subsetting for help with this. Find the best accuracy you can.
 
@@ -138,4 +445,4 @@ model <- knn(train = train_data[, c(4, 6, 9)], test = test_data[, c(4, 6, 9)],
              cl = train_data$V2, k = k)
 ```
 
-## Solutions
+

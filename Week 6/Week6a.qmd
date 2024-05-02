@@ -74,26 +74,26 @@ k-NN is a simple yet effective classification algorithm that works based on the 
 
 Lets consider a simple example. Consider we have a ball bearing factory, and we require all ball bearings to be below a threshold. If they meet this condition, we accept it. If they do not, then we don't accept it. 
 
-Consider the following diagram. The blue dots are rejected ball bearings  and the orange dots are accepted.
+Consider the following diagram (figure 1). The blue dots are rejected ball bearings  and the orange dots are accepted.
 
-![check](images/classification1.png){width="80%"}
+![](images/classification1.png){width="80%"}
 
 Is there a rule we can apply here?
 
-What happens then, we have a new ballbearing (indicated by the yellow dot) that hasn't been classified?
+What happens then, we have a new ballbearing (indicated by the yellow dot) that hasn't been classified? (figure 2)
 what would you classify this as using this rule?
 
-![check](images/classificationNewInstance.png)
+![](images/classificationNewInstance.png)
 
-What happens if they are a bit more mixed up?
+What happens if they are a bit more mixed up? (figure 3)
 Is there a rule?
 
-![check](images/classification2.png)
+![](images/classification2.png)
 
-Now, we add a new ballbearing for you to identify.
+Now, we add a new ballbearing for you to identify. (figure 4)
 What would you class this as?
 
-![check](images/classification2NewInstance.png)
+![](images/classification2NewInstance.png)
 
 The answer is not clear cut.
 Luckily we can use k-Nearest Neighbours to figure this out.
@@ -112,9 +112,9 @@ Here is the k-nearest neighbours process, or algorithm
 If we compared our new ballbearing (yellow) to the closest neighbour (k = 1).
 We would classify this as accepted  as the closest dot to the yellow dot in figure 5 is orange.
 Lets say that we want to use three neighbours (k = 3), the three dots closest to the yellow dot are orange, blue and blue.
-Blue wins (meaning we class the yellow dot as accepted) because there are more blue dots (2) than orange dots (1) to the yellow dot.
+Blue wins (meaning we class the yellow dot as accepted) because there are more blue dots (2) than orange dots (1) to the yellow dot (figure 5).
 
-![check](images/classification2NewInstance-01.png)
+![](images/classification2NewInstance-01.png)
 
 ## The intuition behind the k-nearest-neighbours model.
 
@@ -124,8 +124,8 @@ Now, of course that may also not be true for many reasons and we can be critical
 
 ## Worked Example
 
-Plot these tumors on an x-axis (as above).
-Hint, use X to represent benign and O to represent malignant.
+Plot these ballbearings on an x-axis (as above).
+Hint, use X to represent accepted and O to represent rejected.
 
 # Give worked example
 # Change the context of the example 
@@ -150,6 +150,74 @@ Using K-NN of 1, 3 and 5, predict the classification of the following ballbearin
 1.  2.8
 2.  3.9
 3.  0.7
+
+## Answers
+
+### Measure the distance between each ballbearing and the other ballbearings.
+
+| Ballbearing Size | Classification | Abs. Distance to 1. | Abs. Distance to 2. | Abs. Distance to 3. |
+|------------|----------------|-----|-----|-----|
+| 4.3        | Rejected      | 1.5 | 0.4 | 3.6 |
+| 2.2        | Accepted         | 0.6 | 1.7 | 1.5 |
+| 3.5        | Rejected      | 0.7 | 0.4 | 2.8 |
+| 1.5        | Accepted         | 1.3 | 2.4 | 0.8 |
+| 3.3        | Rejected      | 0.5 | 0.6 | 2.6 |
+| 2.6        | Rejected      | 0.2 | 1.3 | 1.9 |
+| 2.5        | Rejected      | 0.3 | 1.4 | 1.8 |
+| 3.2        | Accepted         | 0.4 | 0.7 | 2.5 |
+| 2.9        | Accepted         | 0.1 | 1.0 | 2.2 |
+
+### Order by Absolute Distance to 1. from least distance to most distance.
+
+| Ballbearing Size | Classification | Abs. Distance to 1. |
+|------------|----------------|-----|
+| 2.9        | Accepted         | 0.1 |
+| 2.6        | Rejected      | 0.2 |
+| 2.5        | Rejected      | 0.3 |
+| 3.2        | Accepted         | 0.4 |
+| 3.3        | Rejected      | 0.5 |
+| 2.2        | Accepted         | 0.6 |
+| 3.5        | Rejected      | 0.7 |
+| 1.5        | Accepted         | 1.3 |
+| 4.3        | Rejected      | 1.5 |
+
+K-NN = 1, is the closest. It's classification is Accepted.
+K-NN = 3, is the closest 3. The classifications are 1 Accepted, 2 Rejected. Therefore it's classification is Rejected.
+K-NN = 5, is the closest 5. The classifications are 2 Accepted, 3 Rejected. Therefore it's classification is Rejected.
+
+
+### Order by Absolute Distance to 2. from least distance to most distance.
+
+| Ballbearing Size | Classification | Abs. Distance to 2. |
+|------------|----------------|-----|-----|-----|
+| 4.3        | Rejected      | 0.4 |
+| 3.5        | Rejected      | 0.4 | 
+| 3.3        | Rejected      | 0.6 |
+| 3.2        | Accepted         | 0.7 |
+| 2.9        | Accepted         | 1.0 |
+| 2.6        | Rejected      | 1.3 |
+| 2.5        | Rejected      | 1.4 |
+| 2.2        | Accepted         | 1.7 |
+| 1.5        | Accepted         | 2.4 |
+
+K-NN = 1, is the closest. It's classification is Rejected.
+K-NN = 3, is the closest 3. The classifications are 3 Rejected. Therefore it's classification is Rejected.
+K-NN = 5, is the closest 5. The classificaitons are 3 Rejected, 2 Accepted. Therefore it's classification is Rejected.
+
+### Order by Absolute Distance to 3. from least distance to most distance.
+
+| Ballbearing Size | Classification | Abs. Distance to 3. |
+|------------|----------------|-----|-----|-----|
+| 1.5        | Accepted         | 0.8 |
+| 2.2        | Accepted         | 1.5 |
+| 2.5        | Rejected      | 1.8 |
+| 2.6        | Rejected      | 1.9 |
+| 2.9        | Accepted         | 2.2 |
+| 3.2        | Accepted         | 2.5 |
+| 3.3        | Rejected      | 2.6 |
+| 3.5        | Rejected      | 2.8 |
+| 4.3        | Rejected      | 3.6 |
+
 
 What do you notice?
 Are there any ballbearings where the classification changes when you use different values of k?
@@ -196,33 +264,69 @@ $$|6−3|+|8−4|=3+4=7$$
 
 ## 2d Example.
 
-Plot these tumors on an x, y axis.
-Hint, use X to represent benign and O to represent malignant.
+Plot these ballbearings on an x, y axis.
+Hint, use X to represent accepted  and O to represent rejected.
 
-| Tumor Mass | Tumor Size | Classification |
+| Ballbearing Mass | Ballbearing Size | Classification |
 |------------|------------|----------------|
-| 3.1        | 4.3        | Malignant      |
-| 0.9        | 2.2        | Benign         |
-| 3.2        | 3.5        | Malignant      |
-| 1.2        | 1.5        | Benign         |
-| 3.2        | 3.3        | Malignant      |
-| 4.6        | 2.6        | Malignant      |
-| 4.3        | 2.5        | Malignant      |
-| 2.0        | 3.2        | Benign         |
-| 2.4        | 2.9        | Benign         |
+| 3.1        | 4.3        | Rejected      |
+| 0.9        | 2.2        | Accepted         |
+| 3.2        | 3.5        | Rejected      |
+| 1.2        | 1.5        | Accepted         |
+| 3.2        | 3.3        | Rejected      |
+| 4.6        | 2.6        | Rejected      |
+| 4.3        | 2.5        | Rejected      |
+| 2.0        | 3.2        | Accepted         |
+| 2.4        | 2.9        | Accepted         |
 
-Now, think about the following tumors with no classification.
+Now, think about the following ballbearings with no classification.
 
-Using K-NN of 1, 3 and 5, predict the classification of the following tumours
+Using K-NN of 1, 3 and 5, predict the classification of the following ballbearings.
 
-1.  Tumor Mass 2.8, Tumor Size = 2.3
-2.  Tumor Mass 3.9, Tumor Size = 2.1
-3.  Tumor Mass 0.7, Tumor Size = 4.6
+1.  Ballbearing Mass 2.8, Ballbearing Size = 2.3
+2.  Ballbearing Mass 3.9, Ballbearing Size = 2.1
+3.  Ballbearing Mass 0.7, Ballbearing Size = 4.6
+
+### Measure the distance between each ballbearing and the first ballbearing.
+
+| Ballbearing Mass | Ballbearing Size | Classification | Mass Distance | Size Distance | Total Distance |
+|------------|------------|----------------|-----|-----|-----|
+| 3.1        | 4.3        | Rejected      | $(3.1 - 2.8)^2$ | $(4.3-2.3)^2$ | 4.09 |
+| 0.9        | 2.2        | Accepted         | $(0.9 - 2.8)^2$ | $(2.2 - 2.3)^2$ | 3.62 |
+| 3.2        | 3.5        | Rejected      | $(3.2 - 2.8)^2$ | $(3.5 - 2.3)^2$ | 1.6 |
+| 1.2        | 1.5        | Accepted         | $(1.2 - 2.8)^2$ | $(1.5 - 2.3)^2$ | 3.2 |
+| 3.2        | 3.3        | Rejected      |  $(3.2 - 2.8)^2$ | $(3.3 - 2.3)^2$ | 1.16 |
+| 4.6        | 2.6        | Rejected      | $(4.6 - 2.8)^2$ | $(2.6 - 2.3)^2$ | 3.33 |
+| 4.3        | 2.5        | Rejected      | $(4.3 - 2.8)^2$ | $(2.5 - 2.3)^2$ | 2.29 |
+| 2.0        | 3.2        | Accepted         | $(2.0 - 2.8)^2$ | $(3.2 - 2.3)^2$ | 1.45 |
+| 2.4        | 2.9        | Accepted         | $(2.4 - 2.8)^2$ | $(2.9 - 2.3)^2$ | 0.52 |
+
+### Order by Absolute Distance to 1. from least distance to most distance.
+
+| Ballbearing Mass | Ballbearing Size | Classification | Total Distance |
+|------------|------------|----------------|-----|-----|-----|
+| 2.4        | 2.9        | Accepted         | 0.52 |
+| 3.2        | 3.3        | Rejected      | 1.16 |
+| 2.0        | 3.2        | Accepted         | 1.45 |
+| 3.2        | 3.5        | Rejected      | 1.6 |
+| 4.3        | 2.5        | Rejected      | 2.29 |
+| 1.2        | 1.5        | Accepted         | 3.2 |
+| 4.6        | 2.6        | Rejected      | 3.33 |
+| 0.9        | 2.2        | Accepted         | 3.62 |
+| 3.1        | 4.3        | Rejected      | 4.09 |
+
+K-NN = 1, is the closest. It's classification is Accepted
+K-NN = 3, is the closest 3. The classifications are 2 Accepted, 1 Rejected. Therefore it's classification is Accepted
+K-NN = 5, is the closest 5. The classificaitons are 3 Rejected, 2 Accepted. Therefore it's classification is Rejected.
+
+
+## Now your turn.
+
+Measure the distances for the second and third ballbearings and do K-NN for 1, 3 and 5.
+
 
 What do you notice?
-Are there any tumors where the classification changes when you use different values of k?
-
-Is there any difference in the prediction if you use Manhattan Distance or Euclidian Distance?
+Are there any ballbearings where the classification changes when you use different values of k?
 
 
 ## Applications of k-NN:

@@ -181,6 +181,7 @@ model <- knn(train = train_data[, 3:32], test = test_data[, 3:32],
 accuracy <- mean(model == test_data$V2) * 100
 cat("Accuracy:", accuracy, "%\n")
 ```
+
 ```{r}
 # Train the 31-NN model
 k <- 31  # Specify the number of neighbors (you can choose any value)
@@ -444,5 +445,3 @@ k <- 5  # Specify the number of neighbors (you can choose any value)
 model <- knn(train = train_data[, c(4, 6, 9)], test = test_data[, c(4, 6, 9)], 
              cl = train_data$V2, k = k)
 ```
-
-

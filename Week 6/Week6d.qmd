@@ -74,26 +74,26 @@ k-NN is a simple yet effective classification algorithm that works based on the 
 
 Lets consider a simple example. Consider we have a ball bearing factory, and we require all ball bearings to be below a threshold. If they meet this condition, we accept it. If they do not, then we don't accept it. 
 
-Consider the following diagram. The blue dots are rejected ball bearings  and the orange dots are accepted.
+Consider the following diagram (figure 1). The blue dots are rejected ball bearings  and the orange dots are accepted.
 
-![check](images/classification1.png){width="80%"}
+![](images/classification1.png){width="80%"}
 
 Is there a rule we can apply here?
 
-What happens then, we have a new ballbearing (indicated by the yellow dot) that hasn't been classified?
+What happens then, we have a new ballbearing (indicated by the yellow dot) that hasn't been classified? (figure 2)
 what would you classify this as using this rule?
 
-![check](images/classificationNewInstance.png)
+![](images/classificationNewInstance.png)
 
-What happens if they are a bit more mixed up?
+What happens if they are a bit more mixed up? (figure 3)
 Is there a rule?
 
-![check](images/classification2.png)
+![](images/classification2.png)
 
-Now, we add a new ballbearing for you to identify.
+Now, we add a new ballbearing for you to identify. (figure 4)
 What would you class this as?
 
-![check](images/classification2NewInstance.png)
+![](images/classification2NewInstance.png)
 
 The answer is not clear cut.
 Luckily we can use k-Nearest Neighbours to figure this out.
@@ -112,9 +112,9 @@ Here is the k-nearest neighbours process, or algorithm
 If we compared our new ballbearing (yellow) to the closest neighbour (k = 1).
 We would classify this as accepted  as the closest dot to the yellow dot in figure 5 is orange.
 Lets say that we want to use three neighbours (k = 3), the three dots closest to the yellow dot are orange, blue and blue.
-Blue wins (meaning we class the yellow dot as accepted) because there are more blue dots (2) than orange dots (1) to the yellow dot.
+Blue wins (meaning we class the yellow dot as accepted) because there are more blue dots (2) than orange dots (1) to the yellow dot (figure 5).
 
-![check](images/classification2NewInstance-01.png)
+![](images/classification2NewInstance-01.png)
 
 ## The intuition behind the k-nearest-neighbours model.
 
@@ -279,9 +279,9 @@ Hint, use X to represent accepted  and O to represent rejected.
 | 2.0        | 3.2        | Accepted         |
 | 2.4        | 2.9        | Accepted         |
 
-Now, think about the following tumors with no classification.
+Now, think about the following ballbearings with no classification.
 
-Using K-NN of 1, 3 and 5, predict the classification of the following tumours
+Using K-NN of 1, 3 and 5, predict the classification of the following ballbearings.
 
 1.  Ballbearing Mass 2.8, Ballbearing Size = 2.3
 2.  Ballbearing Mass 3.9, Ballbearing Size = 2.1
@@ -387,7 +387,6 @@ K-NN = 5, is the closest 5. The classificaitons are 3 Accepted, 2 Rejected. Ther
 
 What do you notice?
 Are there any ballbearings where the classification changes when you use different values of k?
-
 
 
 ## Applications of k-NN:

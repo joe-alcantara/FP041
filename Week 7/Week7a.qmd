@@ -63,7 +63,7 @@ The optimal balance depends on the specific context and the consequences of each
 
 Suppose you have a binary classification problem with the following actual classes and predicted classes for a sample of 20 observations:
 
-Actual Classes: 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1
+Actual Classes: 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1
 
 Predicted Classes: 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1
 
